@@ -21,3 +21,6 @@
 :authorinitials: F.L.N.G.
 
 :revealjs_theme: simple
+:revealjs_history: true
+:revealjs_fragmentInURL: true
+:revealjs_plugin_pdf: enabled
