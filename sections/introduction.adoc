@@ -1,8 +1,10 @@
 == Introdução
 
+ifndef::backend-revealjs[]
 Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre Docker especificamente, mas sim sobre todas as tecnologias que tornaram suas funcionalidades possível.
 
 Entre os assuntos abordados neste documento estão:
+endif::[]
 
 * Sistemas Operacionais e sua arquitetura;
 * Conteinerização;

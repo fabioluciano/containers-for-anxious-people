@@ -20,4 +20,4 @@
 :email: fabio@naoimporta.com
 :authorinitials: F.L.N.G.
 
-:revealjs_theme: solarized
+:revealjs_theme: simple
