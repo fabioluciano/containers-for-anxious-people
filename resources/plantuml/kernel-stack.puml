@@ -21,7 +21,7 @@ package "Hardware" {
 }
 
 Application -down-> GLIBC
-GLIBC -> SCI
+GLIBC -down> SCI
 SCI - Kernel
 Kernel --> CPU
 CPU --> RAM
