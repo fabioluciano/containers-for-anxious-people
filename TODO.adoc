@@ -1,0 +1,5 @@
+**Sessão Kernel**
+
+- [ ] Namespaces
+- [ ] CGroups
+- [ ] Capabilities

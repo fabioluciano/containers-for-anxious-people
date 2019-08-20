@@ -8,6 +8,7 @@ jobs:
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -o index.html -r asciidoctor-diagram  -D output main.adoc
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o documentation.pdf -r asciidoctor-diagram  -D output main.adoc
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 -o presentation.html -r asciidoctor-diagram  -D output main.adoc
+        - rm -rf $TRAVIS_BUILD_DIR/output/.asciidoctor
       deploy:
         provider: pages
         target-branch: gh-pages
