@@ -1,0 +1,4 @@
+== Kernel
+plantuml::resources/plantuml/kernel-stack.puml[config=resources/plantuml/plantuml.cfg]
+
+plantuml::resources/plantuml/kernel-comm.puml[config=resources/plantuml/plantuml.cfg]

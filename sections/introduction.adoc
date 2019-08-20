@@ -1,0 +1,13 @@
+== Sobre o Documento
+
+Sempre quis falar sobre containers e suas tecnologias, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet.
+
+* Sistemas Operacionais e sua arquitetura
+* Conteinerização
+* DevOps
+* Arquitetura de Software
+* Arquitetura de Soluções
+  * Alta Disponibilidade
+  * Clusterização
+  * Construção de soluções tolerantes a falha
+  * Cloud Computing

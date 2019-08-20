@@ -1,0 +1,30 @@
+@startuml kernel-stack
+
+skinparam dpi 200
+
+interface "System Call Interface" as SCI
+
+package "User Space" {
+  component "Aplicação" as Application
+  component "Biblioteca GNU C" as GLIBC
+}
+
+package "Kernel Space" {
+  component "Kernel" as Kernel
+}
+
+package "Hardware" {
+  component "Rede" as Network
+  component "Storage" as Storage
+  component "RAM" as RAM
+  component "CPU" as CPU
+}
+
+Application -down-> GLIBC
+GLIBC -> SCI
+SCI - Kernel
+Kernel --> CPU
+CPU --> RAM
+
+
+@enduml

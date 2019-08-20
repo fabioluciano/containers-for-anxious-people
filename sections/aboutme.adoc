@@ -1,0 +1,2 @@
+== Sobre mim
+Meu nome é **{author}**, trabalho como arquiteto de soluções na empresa link:{company-website}[SONDA]

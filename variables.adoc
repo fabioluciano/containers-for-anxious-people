@@ -1,0 +1,23 @@
+:toc2:
+:toclevels: 2
+:icons: font
+:iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+:linkattrs:
+:sectanchors:
+:nofooter:
+:sectlink:
+:experimental:
+:source-language: asciidoc
+:includedir: sections
+:doc-version: 1.0
+:source-highlighter: pygments
+:doctitle: Containers
+
+:author: Fábio Luciano
+:fullname: Fábio Luciano Nogueira de Góis
+:company: SONDA IT
+:company-website: https://www.sonda.com
+:email: fabio@naoimporta.com
+:authorinitials: F.L.N.G.
+
+:revealjs_theme: solarized

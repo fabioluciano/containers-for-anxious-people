@@ -1,0 +1,38 @@
+@startuml
+skinparam dpi 200
+
+
+title Comunicação da aplicação ao kernel
+
+
+box "User Space"
+  participant Aplicação
+  participant GLIBC
+  participant vDSO
+end box
+
+box "Kernel Space"
+  participant SysCall
+  participant Kernel
+  participant Hardware
+end box
+
+
+Aplicação -> GLIBC
+alt vDSO
+  create vDSO
+  GLIBC -> vDSO
+  vDSO --> GLIBC
+else SysCall
+  GLIBC -> SysCall
+end
+  SysCall -> Kernel
+  Kernel -> Hardware
+
+  Hardware --> Kernel
+  Kernel --> SysCall
+  SysCall --> GLIBC
+  GLIBC --> Aplicação
+
+
+@enduml

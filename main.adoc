@@ -1,0 +1,11 @@
+include::variables.adoc[]
+
+include::{includedir}/aboutme.adoc[]
+
+<<<
+
+include::{includedir}/introduction.adoc[]
+
+<<<
+
+include::{includedir}/kernel.adoc[]

@@ -1,0 +1,18 @@
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: "Publish docs"
+      script:
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -o index.html -r asciidoctor-diagram  -D output main.adoc
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o documentation.pdf -r asciidoctor-diagram  -D output main.adoc
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 -o presentation.html -r asciidoctor-diagram  -D output main.adoc
+      deploy:
+        provider: pages
+        target-branch: gh-pages
+        skip_cleanup: true
+        local_dir: output/
+        github_token: $GH_TOKEN
+        on:
+          branch: development
