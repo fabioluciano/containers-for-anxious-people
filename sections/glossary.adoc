@@ -1,0 +1,15 @@
+[glossary]
+== Glossário
+
+[glossary]
+Container::
+Cluster::
+DevOps::
+ChatOps::
+DevSecOps::
+
+Kernel::
+Kernel Space::
+User Space::
+System Call Interface:: System Call Interface
+SysCall::

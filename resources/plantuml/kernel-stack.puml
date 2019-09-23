@@ -1,8 +1,8 @@
 @startuml kernel-stack
 
-skinparam dpi 200
+skinparam dpi 150
 
-interface "System Call Interface" as SCI
+interface "SCI" as SCI
 
 package "User Space" {
   component "Aplicação" as Application
@@ -21,10 +21,12 @@ package "Hardware" {
 }
 
 Application -down-> GLIBC
-GLIBC -down-> SCI
-SCI - Kernel
+GLIBC -right-> SCI
+SCI -right- Kernel
 Kernel --> CPU
 CPU --> RAM
+CPU --> Storage
+CPU --> Network
 
 
 @enduml

@@ -10,8 +10,8 @@
 :source-language: asciidoc
 :includedir: sections
 :doc-version: 1.0
-:source-highlighter: pygments
-:doctitle: Containers
+:source-highlighter: coderay
+:doctitle: Containers - Uma abordagem profunda
 
 :author: Fábio Luciano
 :fullname: Fábio Luciano Nogueira de Góis
@@ -20,7 +20,7 @@
 :email: fabio@naoimporta.com
 :authorinitials: F.L.N.G.
 
-:revealjs_theme: simple
+:revealjs_theme: white
 :revealjs_history: true
 :revealjs_fragmentInURL: true
 :revealjs_plugin_pdf: enabled

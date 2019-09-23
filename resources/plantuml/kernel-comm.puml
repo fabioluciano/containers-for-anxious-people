@@ -1,5 +1,5 @@
 @startuml
-skinparam dpi 200
+skinparam dpi 150
 
 
 title Comunicação da aplicação ao kernel

@@ -9,3 +9,7 @@ include::{includedir}/introduction.adoc[]
 <<<
 
 include::{includedir}/kernel.adoc[]
+
+<<<
+
+include::{includedir}/glossary.adoc[]
