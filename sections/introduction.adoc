@@ -8,22 +8,35 @@ Caso encontre algum problema, abra uma `issue` na página do projeto no GitHub.
 Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em cinco partes. São elas:
 endif::[]
 
-ifdef::backend-revealjs[]
-* Sistemas Operacionais e sua arquitetura
-endif::[]
-
+ifdef::backend-revealjs[* Sistemas Operacionais e sua arquitetura;]
+ifndef::backend-revealjs[=== Sistemas Operacionais e sua arquitetura]
 ifndef::backend-revealjs[]
-=== Sistemas Operacionais e sua arquitetura
+Nesta _primeira_ parte deste documento, elucidarei como os sistemas operacionais evoluíram o suficiente para possibilitar tecnologias de virtualização disponíveis atualmente. Além disso, apresenta o `Kernel` do Linux de forma a introduzir conceitos utilizados por grande maioria dos provedores de tecnologia de containerização.
 endif::[]
 
+ifdef::backend-revealjs[* Conteinerização;]
+ifndef::backend-revealjs[=== Conteinerização]
 ifndef::backend-revealjs[]
-Nesta primeira parte deste documento, elucidarei como os sistemas operacionais evoluíram o suficiente para possibilitar tecnologias de virtualização disponíveis atualmente. Além disso, apresenta o `Kernel` do Linux de forma a introduzir conceitos utilizados por grande maioria dos provedores de tecnologia de containerização.
+Na _segunda_ parte deste documento,
 endif::[]
 
-* Conteinerização;
-* (Dev(Sec)?|Chat)Ops;
-* Arquitetura de Software;
-* Arquitetura de Soluções.
+ifdef::backend-revealjs[* (Dev(Sec)?|Chat)Ops;]
+ifndef::backend-revealjs[=== (Dev(Sec)?|Chat)Ops]
+ifndef::backend-revealjs[]
+Na _terceira_ parte deste documento,
+endif::[]
+
+ifdef::backend-revealjs[* Arquitetura de Software;]
+ifndef::backend-revealjs[=== Arquitetura de Software]
+ifndef::backend-revealjs[]
+Na _quinta_ parte deste documento,
+endif::[]
+
+ifdef::backend-revealjs[* Arquitetura de Soluções;]
+ifndef::backend-revealjs[=== Arquitetura de Soluções]
+ifndef::backend-revealjs[]
+Na _sexta_ e última parte deste documento,
+endif::[]
 
 === Sobre a distribuição deste documento
 * link:/container-presentation/index.html[HTML]
