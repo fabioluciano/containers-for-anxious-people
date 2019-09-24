@@ -1,27 +1,29 @@
-== Introdução
+== Apresentação
 
 ifndef::backend-revealjs[]
 Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre `Docker` especificamente, mas sim sobre todas as tecnologias que o tornou possível.
 Não é objetivo deste documento ser a "fonte da verdade" sobre containerização ou sobre `Docker`, mas sim um compilado de informações sobre o assunto.
 Caso encontre algum problema, abra uma `issue` na página do projeto no GitHub.
 
-Entre os assuntos abordados neste documento estão:
+Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em cinco partes. São elas:
 endif::[]
 
-[.custom-style]
-[cols="50a,50a"]
-|===
-|* Sistemas Operacionais e sua arquitetura;
-* Conteinerização;
-* DevOps;
-* Arquitetura de Software;
-| * Arquitetura de Soluções;
-** Alta Disponibilidade;
-** Clusterização;
-** Construção de soluções tolerantes a falha;
-** Cloud Computing;
-|===
+ifdef::backend-revealjs[]
+* Sistemas Operacionais e sua arquitetura
+endif::[]
 
+ifndef::backend-revealjs[]
+=== Sistemas Operacionais e sua arquitetura
+endif::[]
+
+ifndef::backend-revealjs[]
+Nesta primeira parte deste documento, elucidarei como os sistemas operacionais evoluíram o suficiente para possibilitar tecnologias de virtualização disponíveis atualmente. Além disso, apresenta o `Kernel` do Linux de forma a introduzir conceitos utilizados por grande maioria dos provedores de tecnologia de containerização.
+endif::[]
+
+* Conteinerização;
+* (Dev(Sec)?|Chat)Ops;
+* Arquitetura de Software;
+* Arquitetura de Soluções.
 
 === Sobre a distribuição deste documento
 * link:/container-presentation/index.html[HTML]

@@ -8,7 +8,23 @@ include::{includedir}/introduction.adoc[]
 
 <<<
 
-include::{includedir}/kernel.adoc[]
+include::{includedir}/operational_systems.adoc[]
+
+<<<
+
+include::{includedir}/containerization.adoc[]
+
+<<<
+
+include::{includedir}/starops.adoc[]
+
+<<<
+
+include::{includedir}/software_architecture.adoc[]
+
+<<<
+
+include::{includedir}/solutions_architecture.adoc[]
 
 <<<
 

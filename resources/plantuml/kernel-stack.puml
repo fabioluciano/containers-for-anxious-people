@@ -1,6 +1,6 @@
 @startuml kernel-stack
 
-skinparam dpi 150
+skinparam dpi 300
 
 interface "SCI" as SCI
 

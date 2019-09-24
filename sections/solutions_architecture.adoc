@@ -1,0 +1,6 @@
+== Arquitetura de Soluções
+
+=== Alta Disponibilidade
+=== Clusterização
+=== Construção de soluções tolerantes a falha
+=== Cloud Computing

@@ -1,4 +1,6 @@
-== Kernel
+== Sistemas Operacionais
+
+=== Kernel
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Kernel do Linux]
