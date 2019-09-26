@@ -1,1 +1,7 @@
 == Containerização
+
+=== Docker
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação da stack de elementos para funcionamento do Docker]
+image::resources/image/full-docker-stack.svg[Stack do Docker, 600]
