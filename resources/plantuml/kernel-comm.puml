@@ -1,7 +1,7 @@
 @startuml
 skinparam dpi 300
 
-title Comunicação da aplicação ao kernel
+title Comunicação da aplicação com o kernel
 
 box "User Space"
   participant Aplicação

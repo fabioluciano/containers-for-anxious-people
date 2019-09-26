@@ -24,3 +24,6 @@
 :revealjs_history: true
 :revealjs_fragmentInURL: true
 :revealjs_plugin_pdf: enabled
+:sourceimages: ./image
+
+ifdef::backend-pdf[:sourceimages: resources/image]
