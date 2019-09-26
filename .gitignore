@@ -1,5 +1,2 @@
 .asciidoctor
 output
-*.png
-*.html
-*.pdf

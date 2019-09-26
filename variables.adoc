@@ -13,6 +13,10 @@
 :source-highlighter: coderay
 :doctitle: Containers e Ansiedade
 
+:toc-title: Índice
+:figure-caption: Figura
+:version-label: Versão
+
 :author: Fábio Luciano
 :fullname: Fábio Luciano Nogueira de Góis
 :company: SONDA IT

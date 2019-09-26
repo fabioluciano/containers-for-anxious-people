@@ -4,4 +4,8 @@
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da stack de elementos para funcionamento do Docker]
-image::resources/image/full-docker-stack.svg[Stack do Docker, 600]
+image::resources/image/docker-stack.png[Stack do Docker, 410, 410]
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação da completa da stack do Docker]
+image::resources/image/docker-full-stack.png[Stack do Docker, 580, 580]
