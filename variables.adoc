@@ -11,7 +11,11 @@
 :includedir: sections
 :doc-version: 1.0
 :source-highlighter: coderay
-:doctitle: Containers - Uma abordagem profunda
+:doctitle: Containers e Ansiedade
+
+:toc-title: Índice
+:figure-caption: Figura
+:version-label: Versão
 
 :author: Fábio Luciano
 :fullname: Fábio Luciano Nogueira de Góis

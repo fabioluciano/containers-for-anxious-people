@@ -1,9 +1,11 @@
-== Apresentação
+== Agenda
 
 ifndef::backend-revealjs[]
-Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre `Docker` especificamente, mas sim sobre todas as tecnologias que o tornou possível.
-Não é objetivo deste documento ser a "fonte da verdade" sobre containerização ou sobre `Docker`, mas sim um compilado de informações sobre o assunto.
-Caso encontre algum problema, abra uma `issue` na página do projeto no GitHub.
+Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre `Docker` especificamente, mas sim sobre todas as tecnologias que o tornou possível e além disso, a partir da disseminação de tecnologias relacionadas a containers, ilustrar como sua existência mudou completamente a industria de infraestrutura e desenvolvimento de software.
+
+Não é objetivo deste documento ser a "fonte da verdade" sobre conteinerização ou sobre `Docker`, mas sim um compilado de informações sobre o assunto que compilei com o tempo. Por diversas vezes, utilizarei de uma linguagem despojada e despretensiosa e sempre que possível atribuirei fontes sobre o assunto. Vou te ajudar amigo ansioso.
+
+Caso encontre algum problema, abra uma link:https://github.com/fabioluciano/container-presentation/issues[issue] na página do projeto no GitHub.
 
 Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em cinco partes. São elas:
 endif::[]
@@ -20,8 +22,8 @@ ifndef::backend-revealjs[]
 Na _segunda_ parte deste documento,
 endif::[]
 
-ifdef::backend-revealjs[* (Dev(Sec)?|Chat)Ops;]
-ifndef::backend-revealjs[=== (Dev(Sec)?|Chat)Ops]
+ifdef::backend-revealjs[* (Dev(Sec)?|Chat|Git)Ops;]
+ifndef::backend-revealjs[=== (Dev(Sec)?|Chat|Git)Ops]
 ifndef::backend-revealjs[]
 Na _terceira_ parte deste documento,
 endif::[]
