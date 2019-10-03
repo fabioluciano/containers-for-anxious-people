@@ -10,8 +10,8 @@
 :source-language: asciidoc
 :includedir: sections
 :doc-version: 1.0
-:source-highlighter: coderay
-:doctitle: Containers e Ansiedade
+:source-highlighter: rouge
+:doctitle: Containers para pessoas ansiosas
 
 :toc-title: Índice
 :figure-caption: Figura

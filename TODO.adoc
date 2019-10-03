@@ -1,5 +1,3 @@
-**Sessão Kernel**
+== Todo
 
-- [ ] Namespaces
-- [ ] CGroups
-- [ ] Capabilities
+Este é um documento em construção.

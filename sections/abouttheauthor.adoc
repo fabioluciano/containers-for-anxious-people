@@ -1,4 +1,4 @@
-== Sobre mim
+== Sobre o autor
 Meu nome é **{author}**, trabalho como arquiteto de soluções na empresa link:{company-website}[SONDA].
 
 ifndef::backend-revealjs[]
@@ -6,15 +6,15 @@ Entre alguns fatos sobre mim, listo os seguintes como mais importantes:
 endif::[]
 
 ifdef::backend-revealjs[=== Alguns fatos]
-* Sou homossexual e casado 🏳️‍🌈;
+* Sou gay e casado 🏳️‍🌈;
 * Sou apaixonado por tecnologia e por software livre 🐧;
 * Sou **ansioso** pra cacete 😰.
 
 ifndef::backend-revealjs[]
-Acho importante dizer essas coisas íntimas, por que acredito que isso, no final das contas me resume em alguns aspectos. E como falaremos intimamente sobre containers, acho interessante abrir essas _verdades_ sobre mim.
+Acho importante dizer essas coisas íntimas, por que acredito que isso, no final das contas, me resume em alguns aspectos. E como falaremos intimamente sobre containers, acho interessante abrir essas _verdades_ sobre mim.
 Além do fato de serem verdades, o último ítem, a ansiedade, foi o que possibilitou meus estudos nos tópicos abordados, e também está possibilitando a escrita deste documento, já que estou usando o tempo em que redijo para me distrair da muvuca da minha cabeça.
 
-Acho importante dizer também que esse documento/apresentação é pra ser despretensiosa. Não pretendo ser coloquial, mas têm coisas que não podemos fugir do nome real, mas vou tentar usar analogias para explicar alguns assuntos que julgar necessário explicar um pouco a mais.
+Acho importante dizer também que esse documento/apresentação é pra ser despretensioso. Não pretendo ser coloquial, mas têm coisas que não podemos fugir do nome real, mas vou tentar usar analogias para explicar alguns assuntos que julgar necessário explicar um pouco a mais.
 
 Antes de continuar, tenho uma pergunta pra fazer: Você sabe alguns problemas da ansiedade? Entre vários, estão os seguintes:
 endif::[]
@@ -44,4 +44,3 @@ ifdef::backend-revealjs[=== Alguns links]
 * https://people.php.net/fabioluciano
 * https://naoimporta.com
 * fabio@naoimporta.com 
-
