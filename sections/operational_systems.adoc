@@ -3,8 +3,8 @@
 === Kernel
 
 ifdef::backend-revealjs[=== !]
-ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Kernel do Linux]
-plantuml::resources/plantuml/kernel-stack.puml[]
+ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]
+image::{sourceimages}/kernel-stack.png[]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da comunicação dos elementos da Stack do Kernel do Linux]
