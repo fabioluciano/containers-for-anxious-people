@@ -1,3 +1,4 @@
 = Containers e Ansiedade
 
 Este é um documento/apresentação sobre a intimidade das tecnologias por trás da containerização.
+

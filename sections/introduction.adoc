@@ -5,7 +5,7 @@ Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem
 
 Não é objetivo deste documento ser a "fonte da verdade" sobre conteinerização ou sobre `Docker`, mas sim um compilado de informações sobre o assunto que compilei com o tempo. Por diversas vezes, utilizarei de uma linguagem despojada e despretensiosa e sempre que possível atribuirei fontes sobre o assunto. Vou te ajudar amigo ansioso.
 
-Caso encontre algum problema, abra uma link:https://github.com/fabioluciano/container-presentation/issues[issue] na página do projeto no GitHub.
+Caso encontre algum problema, abra uma link:https://github.com/fabioluciano/containers-for-anxious-people/issues[issue] na página do projeto no GitHub.
 
 Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em cinco partes. São elas:
 endif::[]
@@ -41,6 +41,6 @@ Na _sexta_ e última parte deste documento,
 endif::[]
 
 === Sobre a distribuição deste documento
-* link:/container-presentation/index.html[HTML]
-* link:/container-presentation/documentation.pdf[Documento PDF]
-* link:/container-presentation/presentation.html[Apresentação]
+* link:/containers-for-anxious-people/index.html[HTML]
+* link:/containers-for-anxious-people/documentation.pdf[Documento PDF]
+* link:/containers-for-anxious-people/presentation.html[Apresentação]
