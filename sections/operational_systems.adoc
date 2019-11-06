@@ -16,3 +16,5 @@ plantuml::resources/plantuml/kernel-comm.puml[]
 ----
 include::../resources/examples/operational_systems/printf.c[]
 ----
+<1> Importa a biblioteca de manipulação de entrada e saída
+<2> Imprime na saída padrão

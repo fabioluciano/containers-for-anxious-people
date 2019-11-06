@@ -1,5 +1,5 @@
-#include <stdio.h>
+#include <stdio.h> // <1>
 
 void main () {
-  printf(":)\n");
+  printf(":)\n"); // <2>
 }
