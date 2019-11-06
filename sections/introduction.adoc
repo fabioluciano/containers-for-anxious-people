@@ -7,25 +7,31 @@ Não é objetivo deste documento ser a "fonte da verdade" sobre conteinerizaçã
 
 Caso encontre algum problema, abra uma link:https://github.com/fabioluciano/containers-for-anxious-people/issues[issue] na página do projeto no GitHub.
 
-Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em cinco partes. São elas:
+Para seguir uma linha de raciocínio, escolhi dividir os assuntos abordados em seis partes. São elas:
+endif::[]
+
+ifdef::backend-revealjs[* Open Source;]
+ifndef::backend-revealjs[=== Open Source]
+ifndef::backend-revealjs[]
+Nesta _primeira_ parte deste documento, vamos conversar sobre *Open Source* e as implicações do trabalho de milhares de pessoas ao redor do mundo para que este documento seja possível. Além disso, discutiremos sobre as aplicações do movimento open source por diversos setores da indústria, até o alimentício.
 endif::[]
 
 ifdef::backend-revealjs[* Sistemas Operacionais e sua arquitetura;]
 ifndef::backend-revealjs[=== Sistemas Operacionais e sua arquitetura]
 ifndef::backend-revealjs[]
-Nesta _primeira_ parte deste documento, elucidarei como os sistemas operacionais evoluíram o suficiente para possibilitar tecnologias de virtualização disponíveis atualmente. Além disso, apresenta o `Kernel` do Linux de forma a introduzir conceitos utilizados por grande maioria dos provedores desta tecnologia.
+Nesta _segunda_ parte , elucidarei como os sistemas operacionais evoluíram o suficiente para possibilitar tecnologias de virtualização disponíveis atualmente. Além disso, apresenta o `Kernel` do Linux de forma a introduzir conceitos utilizados por grande maioria dos provedores desta tecnologia.
 endif::[]
 
 ifdef::backend-revealjs[* Conteinerização;]
 ifndef::backend-revealjs[=== Conteinerização]
 ifndef::backend-revealjs[]
-Na _segunda_ parte deste documento, vamos andar pelos caminhos mais íntimos da containerização.
+Na _terceira_ parte, vamos andar pelos caminhos mais íntimos da containerização. Observaremos como os conceitos há muito utilizados pelo Kernel do linux foram utilizado para criar soluções incríveis
 endif::[]
 
 ifdef::backend-revealjs[* (Dev(Sec)?|Chat|Git)Ops;]
 ifndef::backend-revealjs[=== (Dev(Sec)?|Chat|Git)Ops]
 ifndef::backend-revealjs[]
-Na _terceira_ parte deste documento, 
+Na _quarta_ parte deste documento, 
 endif::[]
 
 ifdef::backend-revealjs[* Arquitetura de Software;]

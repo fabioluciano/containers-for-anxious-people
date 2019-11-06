@@ -9,3 +9,10 @@ image::{sourceimages}/kernel-stack.png[]
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da comunicação dos elementos da Stack do Kernel do Linux]
 plantuml::resources/plantuml/kernel-comm.puml[]
+
+=== Exemplo
+.printf.c
+[source,c]
+----
+include::../resources/examples/operational_systems/printf.c[]
+----

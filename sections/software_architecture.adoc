@@ -1,1 +1,5 @@
 == Arquitetura de Softwares
+
+=== 12 Factor Apps
+
+=== SOA Microserviços

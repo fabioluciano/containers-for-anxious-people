@@ -31,3 +31,4 @@
 :sourceimages: ./image
 
 ifdef::backend-pdf[:sourceimages: resources/image]
+ifdef::backend-revealjs[:source-highlighter: highlightjs]
