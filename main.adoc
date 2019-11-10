@@ -22,6 +22,10 @@ include::{includedir}/opensource.adoc[]
 
 <<<
 
+include::{includedir}/opensource.adoc[]
+
+<<<
+
 include::{includedir}/operational_systems.adoc[]
 
 <<<

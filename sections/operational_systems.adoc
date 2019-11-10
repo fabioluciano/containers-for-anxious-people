@@ -1,11 +1,17 @@
 == Sistemas Operacionais
 
-=== Linux
-* User Space / Kernel Space
-* 
+=== Características
+  - Interface entre o usuário e o hardware
+  - Gerenciamento de dispositivos (Entradas e Saídas)
+  - Prover um ambiente para o funcionamento de programas
+  - Interface para o gerenciamento de dados
+  - Monitorar a saúde do hardware
+
+Eu gostaria de falar sobre o Kernel do `Windows`, mas a verdade é que eu não sei nada sobre, e sinceramente, nunca procurei saber.
 
 
-=== Kernel
+=== Kernel do Linux
+[red]#icon:heart[]#
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]

@@ -1,4 +1,15 @@
 == Open Source
 
-=== Distribuições
-Comumente chamadas de `Distros`
+=== Características
+
+=== Licenças
+
+=== Modelos e organizações
+* A Catedral e o Bazar
+
+=== Cases de Sucesso
+
+==== Linux
+* Distribuições
+
+==== Red Hat
