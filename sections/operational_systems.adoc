@@ -1,14 +1,15 @@
 == Sistemas Operacionais
 
 === Características
-  - Interface entre o usuário e o hardware
-  - Gerenciamento de dispositivos (Entradas e Saídas)
-  - Prover um ambiente para o funcionamento de programas
-  - Interface para o gerenciamento de dados
-  - Monitorar a saúde do hardware
+* Interface entre o usuário e o hardware
+* Gerenciamento de dispositivos (Entradas e Saídas)
+* Prover um ambiente para o funcionamento de programas
+* Interface para o gerenciamento de dados
+* Monitorar a saúde do hardware
 
-Eu gostaria de falar sobre o Kernel do `Windows`, mas a verdade é que eu não sei nada sobre, e sinceramente, nunca procurei saber.
-
+ifndef::backend-revealjs[]
+Gostaria de falar sobre o Kernel do `Windows`, mas a verdade é que eu não sei nada sobre, e sinceramente, nunca procurei saber.
+endif::[]
 
 === Kernel do Linux
 [red]#icon:heart[]#

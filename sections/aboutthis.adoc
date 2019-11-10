@@ -7,6 +7,11 @@ ifdef::backend-revealjs[]
 * Demonstrações das funcionalidades
 endif::[]
 
+=== Sobre a distribuição deste documento
+* link:/containers-for-anxious-people/[HTML]
+* link:/containers-for-anxious-people/doc.pdf[Documento PDF]
+* link:/containers-for-anxious-people/presentation[Apresentação]
+
 === Tecnologias
 * AsciiDoc
 * AsciiDoctor
@@ -14,8 +19,3 @@ endif::[]
 * Shell
 * Travis
 * Github Pages
-
-=== Sobre a distribuição deste documento
-* link:/containers-for-anxious-people/[HTML]
-* link:/containers-for-anxious-people/doc.pdf[Documento PDF]
-* link:/containers-for-anxious-people/presentation[Apresentação]
