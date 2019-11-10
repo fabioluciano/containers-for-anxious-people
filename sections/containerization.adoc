@@ -1,5 +1,41 @@
 == Containerização
 
+VM
+Servidor
+ - Sistema Operacional do Host
+   - Hypervisor - Gerenciará o sistema operacional hospedeiro
+      - Sistemas operacional hospedeiro ( Cada um terá um sistema operacional diferente). É um sistema operacional completo. Demora pra dar boot, já que precisa fazer todo o ciclo de boot relacionado ao sistema operacional hospedeiro
+        -  Binários e bibliotecas
+          - Aplicações   
+
+CONTAINER
+Servidor
+ - Sismtema Operacional host
+ - Docker Engine- É apenas um dos disponíveis, há outros. Todos seguem a especificação de containers
+   - Binários e bibliotecas
+   - Aplicações
+
+Docker
+  Mais popular software de containers
+  Há outros como rkt que também funciona com o kubernetes. É da CoreOs. Pode ser utilizado com o Tectonic
+
+Os containers residem na docker engine, que consiste de
+ - Docker runtime
+ - É um software para rodar as imagens do docker
+
+Docker Hub - Serviço online para guardar e requisitar imagens docker
+Também é possivel ter um docker hub
+É possível automatizar a construção de imagens docker
+
+Benefícios
+
+Isolamento - Você envia o binário com suas dependências - Não existe mais a parada de funciona na minha máquina, mas não em produção.
+Paridade entre os ambientes de desenvolvimento. Já que o mesmo binário será trafegado entre os ambientes
+Ship FASTER ( Entrega rápida)
+A mesma imagem pode rodar em qualquer environment. Laptoops, datacente, VMs, Cloud
+
+Utiliza a feature de containers do kernel para isolamento a nível de sistema operacinal. Essa é a razão do container não conhecer o sistema host ou outros containers. feito n kernel!!!!! Presentation
+
 === Docker
 
 ifdef::backend-revealjs[=== !]

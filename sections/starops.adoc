@@ -1,7 +1,83 @@
 == (Dev(Sec)?|Chat)Ops
 
 === DevOps
+O devops não vai resolver os problemas do projeto. Ele adiciona agilidade ao processo de desenvolvimento/qualidade e entrega
+
+Agile, pequenas entregas. 
+
+
+Desenvolvimento e operação possuem objetivos diferentes quase opostos .
+
+Desenvolvimento = velocidade ( entrega rápida )
+   - liberação de artefatos nde maneira rápidae constante
+Operations = estabilidade do sistema 
+  - não gostam de mudanças, por que inserem riscos que alteram a estabilidade
+
+Dev n ops unique team...
+
+
+Sem os dois trabalharem juntos, há a possibilidade de se criar uma solução mais robusta 
+
+Compartilhar os objetivos e métricas
+
+Goals:
+ Time to market, tempo do desenvolvimento a liberação da funcionalidade
+ Minimizar falhas em produção
+ Recuperação rápida em caso de falha( coisas erradas acontecerão), quanto mais rápido for a resposta, melhor.
+
+Dev and ops mantém uma caixa preta de como será implantada. Culpar.
+
+Possuem objetivos diferentes.
+Devs quebram a estabilidade do opa
+Ops impedem a implantação dos devs
+
+Mesmo que quisessem trabalhar juntos:
+O desenvolvimento é medido em em entregas realizadas, que significa implantar mudanças
+Ops é medido em disponibilidade, mudanças alteraram a estabilidade.
+
+Longo processo pra implantação.
+Falta de automação de processos (construção e deploy) 
+Demora na identificação e resolução de problemas
+
+Automação leva a consistência
+DevOps trabalham juntos pra alcançar a estabilidade e rapidez das entregas
+
+
+O Dev comita, automaticamente o código e construído, integrado e testado.
+
+Os outros times receberão imediatamente o resultado dessa construção. Disponível para implantação 
+
+Monitoramento constante e notificação imediata do time.
+
+Como o deploy é automático, os clientestwlvez não notem problemas,
 
 === ChatOps
 
 === DevSecOps
+
+
+Deploy continuo - o deploy é sempre feito
+Entrega continua - o produto nesta sempre em um estado de ponto pra implantação
+
+
+
+
+Continuamente  mergear as features brancas com a Master,
+
+Executará os testes automatizados e construirá a aplicação.
+
+Acontecerá sempre que o desenvolvedor sincronizar sua cópia com a central.
+
+Sempre que houver problemas identificados pelo processo de ci, os envolvidos devem ser notificados
+
+
+
+
+Preparar o código para implantação em um ambiente
+Compilação, lint, minimified, testado....
+
+Automatizar a construção significa executar todos estes passos de forma consistente
+
+O código deve ser complicado facilmente em qualquer lugar, não somente na máquina em que se está sendo desenvolvido
+
+Rápida, consistente, reproduzível, portável (em qualquer lugar), confiável

@@ -1,0 +1,4 @@
+== Open Source
+
+=== Distribuições
+Comumente chamadas de `Distros`

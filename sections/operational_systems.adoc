@@ -1,5 +1,10 @@
 == Sistemas Operacionais
 
+=== Linux
+* User Space / Kernel Space
+* 
+
+
 === Kernel
 
 ifdef::backend-revealjs[=== !]
@@ -18,3 +23,15 @@ include::../resources/examples/operational_systems/printf.c[]
 ----
 <1> Importa a biblioteca de manipulação de entrada e saída
 <2> Imprime na saída padrão
+
+SIGHUP1 Reinicializa o processo
+SIGKILL 9 Termina sem fazer nenhum tipo de checagem
+GITTERM 15 Termina de forma graciosa
+Sigint interior 2
+
+kill envia um sinal para um proesso ( por padrão é o sigterm)
+
+
+pkill baseado no nome
+
+no top ao apertar k você pode matar um processo

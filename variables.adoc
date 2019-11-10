@@ -12,6 +12,7 @@
 :doc-version: 1.0
 :source-highlighter: rouge
 :doctitle: Containers para pessoas ansiosas
+:examplesdir: resources/examples
 
 :toc-title: Índice
 :figure-caption: Figura

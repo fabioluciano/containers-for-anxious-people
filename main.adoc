@@ -2,6 +2,14 @@ include::variables.adoc[]
 
 <<<
 
+include::{includedir}/abouttheauthor.adoc[]
+
+<<<
+
+include::{includedir}/aboutthis.adoc[]
+
+<<<  
+
 include::{includedir}/introduction.adoc[]
 
 <<<
@@ -10,7 +18,7 @@ include::TODO.adoc[]
 
 <<<
 
-include::{includedir}/abouttheauthor.adoc[]
+include::{includedir}/opensource.adoc[]
 
 <<<
 
