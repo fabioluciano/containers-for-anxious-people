@@ -7,9 +7,6 @@ services:
 
 jobs:
   include:
-    - stage: Compila os exemplos
-      script:
-        - gcc $TRAVIS_BUILD_DIR/resources/examples/operational_systems/printf.c -o $TRAVIS_BUILD_DIR/resources/examples/operational_systems/printf
     - stage: "Publish docs"
       script:
         - mkdir -p output
