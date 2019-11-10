@@ -12,11 +12,25 @@ Gostaria de falar sobre o Kernel do `Windows`, mas a verdade é que eu não sei 
 endif::[]
 
 === Kernel do Linux
-[red]#icon:heart[]#
+[.red]#icon:heart[]#
+
+=== Características
+* Tudo é representado como arquivo;
+** Pseudo filesystems
+*** `dev`, `proc` e `sys`, `fd`
+* Possui clara separação entre o espaço do usuário e o do kernel;
+* Os processos são separados em `namespaces`;
+* A Comunicação entre o `user space` e `kernel space` é feita por intermédio de bibliotecas ou sinais.
+
+=== User Space
+image::{sourceimages}/userspace.svg[]
+
+=== Kernel Space
+image::{sourceimages}/kernelspace.svg[]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]
-image::{sourceimages}/kernel-stack.png[]
+image::{sourceimages}/kernel-stack.svg[]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da comunicação dos elementos da Stack do Kernel do Linux]

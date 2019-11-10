@@ -12,13 +12,6 @@ include::{includedir}/aboutthis.adoc[]
 
 include::{includedir}/introduction.adoc[]
 
-<<<
-
-include::TODO.adoc[]
-
-<<<
-
-include::{includedir}/opensource.adoc[]
 
 <<<
 

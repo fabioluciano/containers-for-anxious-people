@@ -1,15 +1,18 @@
 == Open Source
 
 === Características
+* Descentralização
 
 === Licenças
+* GPLv3
+* Apache
+* MIT
 
 === Modelos e organizações
 * A Catedral e o Bazar
 
 === Cases de Sucesso
-
-==== Linux
-* Distribuições
-
-==== Red Hat
+* Linux
+** Distribuições
+*** Debian
+*** Red Hat 
