@@ -2,6 +2,7 @@
 
 === Características
 * Descentralização
+* Colaboração
 
 === Licenças
 * GPLv3

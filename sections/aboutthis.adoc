@@ -21,6 +21,7 @@ endif::[]
 * Shell
 * Travis
 * Github Pages
+* link:https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO[Asciinema]
 
 <<<
 

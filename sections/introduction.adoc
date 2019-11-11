@@ -1,4 +1,4 @@
-== Introdução
+== PROGRAMAÇÃO
 
 ifndef::backend-revealjs[]
 Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre `Docker` especificamente, mas sim sobre todas as tecnologias que o tornou possível e além disso, a partir da disseminação de tecnologias relacionadas a containers, ilustrar como sua existência mudou completamente a industria de infraestrutura e desenvolvimento de software.

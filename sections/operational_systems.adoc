@@ -22,19 +22,63 @@ endif::[]
 * Os processos são separados em `namespaces`;
 * A Comunicação entre o `user space` e `kernel space` é feita por intermédio de bibliotecas ou sinais.
 
-=== User Space
-image::{sourceimages}/userspace.svg[]
-
-=== Kernel Space
-image::{sourceimages}/kernelspace.svg[]
-
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]
-image::{sourceimages}/kernel-stack.svg[]
+image::{sourceimages}/kernel-stack.svg[width=50%]
+
+ifndef::backend-revealjs[=== User Space]
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação do user space]
+image::{sourceimages}/userspace.svg[width=60%]
+
+ifdef::backend-revealjs[=== !]
+* Onde os processos do usuário são executados;
+* Região fracionada e limitada da memória.
+
+ifndef::backend-revealjs[=== Kernel Space]
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação do kernel space]
+image::{sourceimages}/kernelspace.svg[width=60%]
+
+ifdef::backend-revealjs[=== !]
+* Onde os processos do usuário são executados;
+* Região fracionada e privilegiada da memória.
+
+=== System Calls
+* Único meio de comunicação entre o `User Space` e `Kernel Space`;
+* Gerenciamento de Processos, memória, arquivos, dispositivos, rede e etc.
+
+=== Sinais
+
+* *SIGHUP* - Reinicializa o processo;
+* *GITTERM* - Termina de forma graciosa kbd:[Ctrl + c];
+* *SIGKILL* - Termina sem fazer nenhum tipo de checagem kbd:[Ctrl + d].
+
+=== Memory Management
+* Gerenciamento da memória;
+* Decide como os dados serão persistidos e recuperados;
+* Memória virtual;
+* Paginação;
+* Controle de Acesso.
+
+=== Scheduler
+* Define em tempo de execução a alocação de recursos para um processo;
+* Priorização dinâmica.
+
+=== Drivers
+* Também chamado de módulos;
+* Interface de comunicação entre o `Kernel` e os devices.
+
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+lsmod <1>
+----
+<1> Lista os módulos(drivers) carregados no Kernel.
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da comunicação dos elementos da Stack do Kernel do Linux]
-plantuml::resources/plantuml/kernel-comm.puml[]
+plantuml::resources/plantuml/kernel-comm.puml[width=70%]
 
 === Exemplo
 .printf.c
@@ -45,14 +89,80 @@ include::../resources/examples/operational_systems/printf.c[]
 <1> Importa a biblioteca de manipulação de entrada e saída
 <2> Imprime na saída padrão
 
-SIGHUP1 Reinicializa o processo
-SIGKILL 9 Termina sem fazer nenhum tipo de checagem
-GITTERM 15 Termina de forma graciosa
-Sigint interior 2
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+gcc printf.c -o printf <1> 
+----
+<1> Compila o programa e define o arquivo de saída
 
-kill envia um sinal para um proesso ( por padrão é o sigterm)
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+chmod +x ./printf <1>
+strace ./printf <2> 
+----
+<1> Concede permissão de execução ao programa
+<2> Imprime todas as `SysCalls` chamadas pelo programa
 
+=== Chroot (Jail)
+* Muda o diretório raiz de um processo;
+* Enclausuramento de recursos;
 
-pkill baseado no nome
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+ldd ./printf <1>
+mkdir -p chroot/{lib,lib64,} <2>
+cp -v /lib/x86_64-linux-gnu/libc.so.6 ./chroot/lib <3>
+cp -v /lib64/ld-linux-x86-64.so.2 ./chroot/lib64 <3>
+cp ./printf ./chroot/bin <3>
+sudo chroot ./chroot/ /bin/printf <4>
+----
+<1> Imprime as bibliotecas que o binário utiliza
+<2> Cria a estrutura de diretórios necessário (`FHS`)
+<3> Copia as bibliotecas e binário para e estrutura criada
+<4> Exacuta o programa enclausurado
 
-no top ao apertar k você pode matar um processo
+=== Namespaces
+* Mount (`mnt`)
+* Process (`pid`)
+* Network (`net`)
+* Interprocess Communication (`ipc`)
+* UNIX Timesharing System (`uts`)
+* User ID (`user`)
+* CGroup
+
+ifdef::backend-revealjs[=== !]
+* Padrão namespace global;
+* Os namespaces podem ser visualizados em `/proc/<processid>/ns/*`
+
+ifdef::backend-revealjs[=== !]
+* unshare
+* setns
+* clone
+
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+unshare --user /bin/bash <1>
+UNSHARED_PID=`echo $$` <2>
+cd /proc/$UNSHARED_PID/ns <3>
+ls -l <4>
+----
+<1> Unshare a execução do binário em um namespace `user` diferente
+<2> Imprime o `pid` do processo criado e o associa a uma variável
+<3> Muda o workdir para o diretório com a lista de namespaces do processo
+<4> Lista os namespaces
+
+ifdef::backend-revealjs[=== !]
+[source,bash]
+----
+hostname <1>
+unshare --uts /bin/bash <2>
+hostname teste <3>
+hostname <4>
+kbd:[Ctrl + d] <5>
+hostname <6>
+----
+<1> Unshare a execução do binário em um namespace `user` diferente
