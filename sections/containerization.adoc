@@ -1,50 +1,102 @@
 == Containerização
+* Empacotamento de código e aplicações;
+* Empacotamento de dependências e versões;
+* Empacotamento de configurações.
+* *Reusabilidade* e *Reproducibilidade*.
 
-VM
-Servidor
- - Sistema Operacional do Host
-   - Hypervisor - Gerenciará o sistema operacional hospedeiro
-      - Sistemas operacional hospedeiro ( Cada um terá um sistema operacional diferente). É um sistema operacional completo. Demora pra dar boot, já que precisa fazer todo o ciclo de boot relacionado ao sistema operacional hospedeiro
-        -  Binários e bibliotecas
-          - Aplicações   
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação da diferença entre VMs e containers]
+image::{sourceimages}/container_vs_vm.svg[width=100%]
 
-CONTAINER
-Servidor
- - Sismtema Operacional host
- - Docker Engine- É apenas um dos disponíveis, há outros. Todos seguem a especificação de containers
-   - Binários e bibliotecas
-   - Aplicações
+=== Virtual Machines
+* Hardware
+* Sistema Operacional(Host)
+* Hypervisor - Habilita a virtualização/gerenciamento dos recursos
+* Sistema Operacional(Hospedeiro)
+* Binários e bibliotecas
+* Aplicações
 
-Docker
-  Mais popular software de containers
-  Há outros como rkt que também funciona com o kubernetes. É da CoreOs. Pode ser utilizado com o Tectonic
+=== Containers
+* Hardware
+* Sistema Operacional(Host)
+* Daemon(Daemon based)
+* Binários e bicliotecas
+* Aplicações
 
-Os containers residem na docker engine, que consiste de
- - Docker runtime
- - É um software para rodar as imagens do docker
-
-Docker Hub - Serviço online para guardar e requisitar imagens docker
-Também é possivel ter um docker hub
-É possível automatizar a construção de imagens docker
-
-Benefícios
-
-Isolamento - Você envia o binário com suas dependências - Não existe mais a parada de funciona na minha máquina, mas não em produção.
-Paridade entre os ambientes de desenvolvimento. Já que o mesmo binário será trafegado entre os ambientes
-Ship FASTER ( Entrega rápida)
-A mesma imagem pode rodar em qualquer environment. Laptoops, datacente, VMs, Cloud
-
-Utiliza a feature de containers do kernel para isolamento a nível de sistema operacinal. Essa é a razão do container não conhecer o sistema host ou outros containers. feito n kernel!!!!! Presentation
+=== Vendors
+ifndef::backend-revealjs[.Principais vendors de ferramentas separadas por características]
+[options="header,footer"]
+|=======================
+| Daemon | Daemonless | Systemd
+| Docker | Buildah    | Rkt
+|        | Podman    |
+|=======================
 
 === Docker
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Docker]
-image::{sourceimages}/docker-stack.png[]
+image::{sourceimages}/docker-stack.svg[width=70%]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Docker mais os elementos referentes ao Kernel do Linux]
-image::{sourceimages}/docker-full-stack.png[]
+image::{sourceimages}/docker-full-stack.svg[width=70%]
 
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação real da stack do Docker]
+image::{sourceimages}/docker-stack-real.svg[width=70%]
 
-=== Podman
+ifdef::backend-revealjs[=== !]
+* Mais popular software de containers;
+* Elementos da stack:
+** Daemon
+** API
+** Client
+
+=== Ecosistema
+* Docker Hub(Registrador)
+
+=== Elementos
+* Dockerfile
+* Container
+* Volumes
+* Network 
+
+=== Dockerfile
+* Segue a especificação `image-spec` do projeto `opencontainers`
+* Descrever o ambiente procedimentos para se implantar a aplicação
+* Possui uma DSL(Domain-Specific Language)
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Exemplo de arquivo Dockerfile]
+[source,docker]
+----
+include::../resources/examples/containerization/Dockerfile[]
+----
+<1> Informa a imagem base(conjunto de layers) que será utilizada
+<2> Atualiza a lista de pacotes
+<3> Instala o pacote `curl`
+
+=== Container
+* Segue a especificação `runc` do projeto `opencontainers`;
+* É uma imagem em execução com a adição de uma branch writtable no topo;
+* Pode possuir volumes e networks;
+* Controle de recursos com CGROUPS e CAPABILITIES.
+
+=== Volumes
+* Onde os dados serão persistidos;
+* Possuem três tipos:
+*** host
+*** anônimo
+*** nomeado
+* Pode ser estendido com a utilização de plugins(nfs)
+
+=== Network
+* Onde os dados do container serão trafegados
+* Pode ser estendido com a utilização de plugins(cluster)
+* Segue a especificação `cni` do projeto `containernetworking`;
+
+=== Benefícios
+* *Isolamento* - Uma imagem com binários e dependências.
+* *Paridade* - Prod/Dev
+* *Entrega rápida* - Automação de build e deploy

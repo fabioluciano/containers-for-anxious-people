@@ -150,7 +150,7 @@ UNSHARED_PID=`echo $$` <2>
 cd /proc/$UNSHARED_PID/ns <3>
 ls -l <4>
 ----
-<1> Unshare a execução do binário em um namespace `user` diferente
+<1> Destaca a execução do binário em um namespace `user` diferente
 <2> Imprime o `pid` do processo criado e o associa a uma variável
 <3> Muda o workdir para o diretório com a lista de namespaces do processo
 <4> Lista os namespaces
@@ -162,7 +162,18 @@ hostname <1>
 unshare --uts /bin/bash <2>
 hostname teste <3>
 hostname <4>
-kbd:[Ctrl + d] <5>
+Ctrl + d <5>
 hostname <6>
 ----
-<1> Unshare a execução do binário em um namespace `user` diferente
+<1> Recupera o hostname atual
+<2> Destaca a execução do binário em um namespace `user` diferente
+<3> Altera o hostname da máquina
+<4> Recupera o novo hostname
+<5> Envia o `SIGNAL` SIGKILL
+<6> Imprime o hostname no processo principal
+
+=== UnionFS
+* Diretórios e arquivos em diferentes branches;
+* Top-Down search nas layers;
+* Todas as layers inferiores são `read-only`;
+* COW(`copy-on-write`).

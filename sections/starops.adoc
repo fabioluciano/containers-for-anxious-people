@@ -81,3 +81,5 @@ Automatizar a construção significa executar todos estes passos de forma consis
 O código deve ser complicado facilmente em qualquer lugar, não somente na máquina em que se está sendo desenvolvido
 
 Rápida, consistente, reproduzível, portável (em qualquer lugar), confiável
+
+=== Conversational Development
