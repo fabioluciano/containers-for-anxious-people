@@ -1,19 +1,31 @@
 == Open Source
 
 === Características
-* Descentralização
-* Colaboração
+* Descentralização;
+* Colaboração;
+* Liberdade.
 
 === Licenças
-* GPLv3
-* Apache
-* MIT
+* GPLv3;
+* Apache;
+* MIT.
 
 === Modelos e organizações
 * A Catedral e o Bazar
+** Catedral
+** Bazar
 
 === Cases de Sucesso
 * Linux
+** Metadistribuições
+*** Slackware;
+*** Gentoo;
+*** Arch Linux;
 ** Distribuições
-*** Debian
-*** Red Hat 
+*** Debian;
+*** Red Hat;
+
+=== Olhar pessoal
+* As comunidades relacionadas são incríveis (irc, fórum, etc.);
+* As documentações são incríveis (Arch Linux);
+* Salvo exceções, sempre há alguém disposto a ajudar.

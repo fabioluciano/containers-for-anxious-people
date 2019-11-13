@@ -12,7 +12,7 @@ clean:
 	sudo rm -rf $(CURDIR)/output
 
 prepare:
-	docker pull asciidoctor/docker-asciidoctor
+	#docker pull asciidoctor/docker-asciidoctor
 	mkdir -p $(OUTPUTDIR) 
 
 copy_images:

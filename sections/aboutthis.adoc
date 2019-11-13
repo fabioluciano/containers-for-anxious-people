@@ -14,15 +14,16 @@ endif::[]
 * link:/containers-for-anxious-people/doc.pdf[Documento PDF]
 * link:/containers-for-anxious-people/presentation[Apresentação]
 
+<<<
+
+include::todo.adoc[]
+
 === Tecnologias
 * AsciiDoc
 * AsciiDoctor
+* PlantUML
 * Docker
 * Shell
 * Travis
 * Github Pages
 * link:https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO[Asciinema]
-
-<<<
-
-include::todo.adoc[]

@@ -3,6 +3,5 @@
 
 void main () {
   printf(":)\n"); // <2>
-
   usleep(520000*1000);
 }

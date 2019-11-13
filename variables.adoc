@@ -25,11 +25,12 @@
 :email: fabio@naoimporta.com
 :authorinitials: F.L.N.G.
 
-:revealjs_theme: white
+:revealjs_theme: league
 :revealjs_history: true
 :revealjs_fragmentInURL: true
 :revealjs_plugin_pdf: enabled
 :sourceimages: ./image
+:revealjs_slideNumber: c/t
 
 ifdef::backend-pdf[:sourceimages: resources/image]
 ifdef::backend-revealjs[:source-highlighter: highlightjs]

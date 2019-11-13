@@ -1,0 +1,19 @@
+== Conversational Development (ConvDev)
+* Desenvolver software é uma conversa;
+** O que precisa ser implementado;
+** O que precisa ser modificado;
+** Como será implementado;
+** Onde será implantado;
+** Como será controlado.
+
+ifdef::backend-revealjs[=== !]
+* É a aplicação do agile com um objetivo simples: Finalizar uma conversa;
+* A conversa deve ter como objetivo a criação de um produto;
+* Passa por todas as áreas da linha de negócio;
+* Alinha-se a organização para que os processos sejam executados.
+
+=== Princípios
+* Ciclos de conversas pequenos;
+* A conversa deve passar por todos os estágios do CDS;
+* Abra a conversa, mas não espere consenso;
+* Resultados orientados por conversação.

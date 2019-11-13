@@ -39,19 +39,19 @@ ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Dock
 image::{sourceimages}/docker-stack.svg[width=70%]
 
 ifdef::backend-revealjs[=== !]
+* Mais popular software de containers;
+* Elementos da stack:
+** Daemon
+** API
+** Client
+
+ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação de todos os elementos da Stack do Docker mais os elementos referentes ao Kernel do Linux]
 image::{sourceimages}/docker-full-stack.svg[width=70%]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação real da stack do Docker]
 image::{sourceimages}/docker-stack-real.svg[width=70%]
-
-ifdef::backend-revealjs[=== !]
-* Mais popular software de containers;
-* Elementos da stack:
-** Daemon
-** API
-** Client
 
 === Ecosistema
 * Docker Hub(Registrador)
@@ -63,8 +63,8 @@ ifdef::backend-revealjs[=== !]
 * Network 
 
 === Dockerfile
-* Segue a especificação `image-spec` do projeto `opencontainers`
-* Descrever o ambiente procedimentos para se implantar a aplicação
+* Segue a especificação `image-spec` do projeto `opencontainers`;
+* Descreve procedimentos necessários para se criar um ambiente;
 * Possui uma DSL(Domain-Specific Language)
 
 ifdef::backend-revealjs[=== !]
@@ -77,18 +77,27 @@ include::../resources/examples/containerization/Dockerfile[]
 <2> Atualiza a lista de pacotes
 <3> Instala o pacote `curl`
 
+ifdef::backend-revealjs[=== !]
+* Uma imagem é um conjunto de layers sobrepostas;
+* Cada instrução criará uma nova `layer` na imagem final;
+* Cada layer aumenta o tamanho da imagem.
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação das layers do Docker]
+image::{sourceimages}/docker-layers.png[width=95%]
+
 === Container
 * Segue a especificação `runc` do projeto `opencontainers`;
 * É uma imagem em execução com a adição de uma branch writtable no topo;
 * Pode possuir volumes e networks;
-* Controle de recursos com CGROUPS e CAPABILITIES.
+* Controle de recursos com `CGROUPS` e `CAPABILITIES`.
 
 === Volumes
 * Onde os dados serão persistidos;
 * Possuem três tipos:
-*** host
-*** anônimo
-*** nomeado
+*** Host
+*** Anônimo
+*** Nomeado
 * Pode ser estendido com a utilização de plugins(nfs)
 
 === Network
@@ -98,5 +107,5 @@ include::../resources/examples/containerization/Dockerfile[]
 
 === Benefícios
 * *Isolamento* - Uma imagem com binários e dependências.
-* *Paridade* - Prod/Dev
+* *Paridade* e *Portabilidade* - Prod/Dev
 * *Entrega rápida* - Automação de build e deploy

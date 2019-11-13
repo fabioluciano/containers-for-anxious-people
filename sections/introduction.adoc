@@ -28,20 +28,26 @@ ifndef::backend-revealjs[]
 Na _terceira_ parte, vamos andar pelos caminhos mais íntimos da containerização. Observaremos como os conceitos há muito utilizados pelo Kernel do linux foram utilizado para criar soluções incríveis
 endif::[]
 
-ifdef::backend-revealjs[* (Dev(Sec)?|Chat|Git)Ops;]
-ifndef::backend-revealjs[=== (Dev(Sec)?|Chat|Git)Ops]
+ifdef::backend-revealjs[* Conversational Development;]
+ifndef::backend-revealjs[=== Conversational Development]
 ifndef::backend-revealjs[]
 Na _quarta_ parte deste documento, 
+endif::[]
+
+ifdef::backend-revealjs[* (Dev(Sec)?|Chat)Ops;]
+ifndef::backend-revealjs[=== (Dev(Sec)?|Chat)Ops]
+ifndef::backend-revealjs[]
+Na _quinta_ parte deste documento, 
 endif::[]
 
 ifdef::backend-revealjs[* Arquitetura de Software;]
 ifndef::backend-revealjs[=== Arquitetura de Software]
 ifndef::backend-revealjs[]
-Na _quinta_ parte deste documento,
+Na _sexta_ parte deste documento,
 endif::[]
 
 ifdef::backend-revealjs[* Arquitetura de Soluções;]
 ifndef::backend-revealjs[=== Arquitetura de Soluções]
 ifndef::backend-revealjs[]
-Na _sexta_ e última parte deste documento,
+Na _sétima_ e última parte deste documento,
 endif::[]

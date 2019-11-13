@@ -1,85 +1,171 @@
-== (Dev(Sec)?|Chat)Ops
+== IaC e (Dev(Sec)?|Chat)Ops
+
+=== Infraestrutura como código (IaC)
+* Trata a infraestrutura como código;
+* Está intimamente ligado às práticas do `DevOps`;
+* Permite a adoção de práticas do desenvolvimento;
+** Controle de versão
+** Revisão por pares
+** Segmentação de ambientes
+** Testes
+
+=== Ferramentas disponíveis
+* *Terraform*
+* Cloud Formation
+* *Ansible*
+* Chef
+* Puppet
+
+=== Terraform
+* A infraestrutura é definida utilizando HCL;
+* Utiliza grafos para controlar as dependências dos recursos;
+* Possui implementação para diversos providers(AWS, Azure, Google, etc.);
+* Todos os recursos necessários podem ser criados programáticamente.
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação de uma infraestrutura ]
+image::{sourceimages}/terraform.png[width=100%]
+
+=== Exemplo
+[source,hcl]
+----
+include::../resources/examples/terraform.hcl[]
+----
+
+=== Ansible
+* Engine de automação;
+* Idempotência
+* Utiliza `yaml` para descrever os procedimentos;
+* Módulos:
+** Infraestrutura na núvel;
+** Gerenciamento de Configuração;
+** Construção e implantação de aplicações..
+
+ifdef::backend-revealjs[=== !]
+* As máquinas alvo da execução são organizadas em um `inventory`
+* Utiliza o protocolo `SSH` para se comunicar as máquinas do `inventory`;
+* As execuções são agrupadas em `playbooks`;
+* Cada execução é chamada de `play`.
+
+=== Exemplo
+[source,yml]
+----
+include::../resources/examples/ansible.yml[]
+----
+
+=== Terraform + Ansible icon:heart[]
 
 === DevOps
-O devops não vai resolver os problemas do projeto. Ele adiciona agilidade ao processo de desenvolvimento/qualidade e entrega
+* Filosofia e práticas a serem implementas;
+* A aplicação impactam duas áreas Desenvolvimento(Dev) e Operação(Ops);
+* Sua aplicação envolve o negócio, pessoas e tecnologia;
+* A adoção `DevOps` não resolverá problemas do projeto;
+* A adoção `Devops` fará com que os problemas sejam expostos;
 
-Agile, pequenas entregas. 
+ifdef::backend-revealjs[=== !]
+* `DevOps` não é *Jenkins*;
+* `DevOps` não é um cargo;
+* Seu maior valor será adquirido com equipes que seguem metodologias ágeis;
 
+=== Problemas a serem resolvidos
+* Longo processo pra implantação e entrega;
+* Falta de automação de processos no CDS;
+* Demora na identificação e resolução de problemas.
 
-Desenvolvimento e operação possuem objetivos diferentes quase opostos .
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação do ciclo DevOps]
+image::{sourceimages}/devops-toolchain.svg[width=100%]
 
-Desenvolvimento = velocidade ( entrega rápida )
-   - liberação de artefatos nde maneira rápidae constante
-Operations = estabilidade do sistema 
-  - não gostam de mudanças, por que inserem riscos que alteram a estabilidade
-
-Dev n ops unique team...
-
-
-Sem os dois trabalharem juntos, há a possibilidade de se criar uma solução mais robusta 
-
-Compartilhar os objetivos e métricas
-
-Goals:
- Time to market, tempo do desenvolvimento a liberação da funcionalidade
- Minimizar falhas em produção
- Recuperação rápida em caso de falha( coisas erradas acontecerão), quanto mais rápido for a resposta, melhor.
-
-Dev and ops mantém uma caixa preta de como será implantada. Culpar.
-
-Possuem objetivos diferentes.
-Devs quebram a estabilidade do opa
-Ops impedem a implantação dos devs
-
-Mesmo que quisessem trabalhar juntos:
-O desenvolvimento é medido em em entregas realizadas, que significa implantar mudanças
-Ops é medido em disponibilidade, mudanças alteraram a estabilidade.
-
-Longo processo pra implantação.
-Falta de automação de processos (construção e deploy) 
-Demora na identificação e resolução de problemas
+=== DevOps em uma palavra
+*Automação*
 
 Automação leva a consistência
-DevOps trabalham juntos pra alcançar a estabilidade e rapidez das entregas
 
+ifdef::backend-revealjs[=== !]
+* Automação do processo de build;
+* Automação de verificações de qualidade;
+** Testes unitários;
+** Testes funcionais;
+** Testes de integração;
+** Testes de regressão;
 
-O Dev comita, automaticamente o código e construído, integrado e testado.
+ifdef::backend-revealjs[=== !]
+* Automação do processo de release;
+* Automação de verificações de acessibilidade;
+* Automação do processo de gerenciamento de configuração;
+* Automação do processo de deploy.
+* Automação do monitoramento;
 
-Os outros times receberão imediatamente o resultado dessa construção. Disponível para implantação 
+=== Development x Operation
+* Possuem objetivos diferentes, quase opostos;
+** *Desenvolvimento* - Liberação de *artefatos* de maneira *rápida* e *constante*;
+** *Operação* - Não são favoráveis a mudança, pois introduzem riscos alterando a estabilidade;
+* O Desenvolvimento quebra a estabilidade da Operação;
 
-Monitoramento constante e notificação imediata do time.
+ifdef::backend-revealjs[=== !]
+* A operação impede a implantação de um artefato do desenvolvimento.
+* O trabalho dos Devs e Ops são caixas-preta mutualmente;
 
-Como o deploy é automático, os clientestwlvez não notem problemas,
+=== Objetivos
+* `Dev` e `Ops` compartilham objetivos e métricas;
+* Envolver os dois times com o objetivo da implantação da aplicação;
+* Alcançar o cumprimento de prazos e o **time to market**;
+* Liberação de pequenas frações testadas exaustivamente;
+* Minimizar problemas da entrega e implantação;
+* Recuperação rápida em caso de falhas;
 
-=== ChatOps
+=== Práticas
+* Integração Contínua;
+* Qualidade Contínua;
+* Entrega Contínua;
+* Implantação Contínua;
+* Monitoramento Contínuo.
+
+=== Resultado
+* `Dev` e `Ops` trabalham juntos pra alcançar a estabilidade e rapidez das entregas;
+* Processo de desenvolvimento estável e reproduzível;
+* *Qualidade*
 
 === DevSecOps
+* Segue os mesmos princípios que o `DevOps`
+* Acrescenta verificações de segurança ao processo;
+* O Objetivo é encontrar vulnerabilidades em qualquer estágio do CDS;
 
+=== ChatOps
+* Conversation-driven
+* Procedimentos são traduzidos em comandos;
+* Os comandos são orquestrados por um robô;
+* Comumente utilizado em ferramentas como `Slack`, `HipChat`, `IRC`;
+* Utiliza um robô que monitorará as conversas(Hubot);
 
-Deploy continuo - o deploy é sempre feito
-Entrega continua - o produto nesta sempre em um estado de ponto pra implantação
+ifdef::backend-revealjs[=== !]
+* Os comandos executarão:
+** Ações, que serão traduzidos para procedimentos;
+** Ações, que trarão informações.
 
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação da implementação do ChatOps]
+image::{sourceimages}/chatops.png[width=100%]
 
+=== Benefícios Sociais
+* Aumenta a colaboração/integração no desenvolvimento do produto;
+* Aumenta o compatilhamento de informações;
+* Aumenta a visibilidade e monitoramento de pontos críticos;
+* Aumenta o conhecimento da equipe sobre o que está sendo desenvolvido;
 
+=== Benefícios tecnológicos
+* Aumenta a automação;
+* Aumenta a velocidade de ações e execuções de instruções;
+* Aumenta a segurança;
+* Log automático de ações e diálogos;
+* Redução de e-mails
 
-Continuamente  mergear as features brancas com a Master,
+=== Ajuda a...
+* Compartilhar informações e problemas;
+* Velocidade de feedbacks;
+* Automação de tarefas;
 
-Executará os testes automatizados e construirá a aplicação.
-
-Acontecerá sempre que o desenvolvedor sincronizar sua cópia com a central.
-
-Sempre que houver problemas identificados pelo processo de ci, os envolvidos devem ser notificados
-
-
-
-
-Preparar o código para implantação em um ambiente
-Compilação, lint, minimified, testado....
-
-Automatizar a construção significa executar todos estes passos de forma consistente
-
-O código deve ser complicado facilmente em qualquer lugar, não somente na máquina em que se está sendo desenvolvido
-
-Rápida, consistente, reproduzível, portável (em qualquer lugar), confiável
-
-=== Conversational Development
+=== Arquitetura com ferramentas Open Source
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação de uma arquitetura DevOps]
+image::{sourceimages}/arquitetura-devops.svg[width=100%]

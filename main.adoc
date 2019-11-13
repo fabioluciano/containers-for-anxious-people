@@ -8,10 +8,9 @@ include::{includedir}/abouttheauthor.adoc[]
 
 include::{includedir}/aboutthis.adoc[]
 
-<<<  
+<<<
 
 include::{includedir}/introduction.adoc[]
-
 
 <<<
 
@@ -27,6 +26,10 @@ include::{includedir}/containerization.adoc[]
 
 <<<
 
+include::{includedir}/convdev.adoc[]
+
+<<<
+
 include::{includedir}/starops.adoc[]
 
 <<<
@@ -36,7 +39,3 @@ include::{includedir}/software_architecture.adoc[]
 <<<
 
 include::{includedir}/solutions_architecture.adoc[]
-
-<<<
-
-include::{includedir}/glossary.adoc[]

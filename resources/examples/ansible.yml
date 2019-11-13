@@ -1,0 +1,14 @@
+- name: Docker | Install or Upgrade
+  block:
+  - name: Docker | Install the package
+    package:
+      name: docker.io
+      state: present
+      force_apt_get: true
+    become: true
+  - name: Docker | Add current user to docker group
+    user: 
+      name: "{{ ansible_user }}"
+      groups: docker
+      append: yes
+    become: true

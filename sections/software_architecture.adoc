@@ -1,5 +1,7 @@
-== Arquitetura de Softwares
+== Arquitetura de Software
+
+=== Requisitos não funcionais
 
 === 12 Factor Apps
 
-=== SOA Microserviços
+=== Microserviços

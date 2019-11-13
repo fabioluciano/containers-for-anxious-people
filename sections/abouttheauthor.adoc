@@ -1,4 +1,3 @@
-[background-color="green"]
 == Sobre o autor
 Meu nome é **{author}**, trabalho como arquiteto de soluções na empresa link:{company-website}[SONDA].
 
@@ -25,7 +24,7 @@ endif::[]
 ifdef::backend-revealjs[=== O porquê desta apresentação?]
 * Organizar meus conhecimentos sobre o assunto em algum lugar;
 * Enfrentar o medo de falar publicamente; e
-* Ganhar segurança generalizada.
+* *Disseminar o conhecimento*.
 
 ifndef::backend-revealjs[]
 Ah! Se você têm interesse por meu currículo profissional, aqui está alguns links pra que dê uma olhada: 
@@ -33,6 +32,7 @@ endif::[]
 
 ifdef::backend-revealjs[=== Alguns links]
 * https://fabioluciano.dev
+* https://integr8.me
 * https://github.com/fabioluciano
 * https://people.php.net/fabioluciano
 * https://naoimporta.com

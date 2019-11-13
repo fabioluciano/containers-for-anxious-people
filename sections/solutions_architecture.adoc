@@ -1,23 +1,49 @@
 == Arquitetura de Soluções
 
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação do ciclo DevOps]
+image::{sourceimages}/panacea.png[width=50%]
+
+=== Cloud Computing
+
+=== Vendors
+* Amazon Web Service
+* Google Cloud
+* Microsoft Azure
+
+=== Tipos de serviços
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação do ciclo DevOps]
+image::{sourceimages}/plataformas.png[width=100%]
+
 === Well Architected Framework
-Security - The ability to protect information, systems, and assets
-while delivering business value through risk assessments
-and mitigation strategies.
-Cost Eficient - The ability to run systems to deliver business value at
-the lowest price point.
-Resilient - The ability of a system to recover from infrastructure
+
+=== Segurança
+Habilidade de proteger informações, sistemas e ativos enquanto entrega valor ao negócio, enquanto se avalia e mitiga os riscos.
+
+=== Custo Efetivo
+Habilidade de executar sistemas e entregar valor ao negócio enquanto mantêm o custo-benefício.
+
+=== Resiliência
+The ability of a system to recover from infrastructure
 or service disruptions, dynamically acquire computing
 resources to meet demand, and mitigate disruptions
 such as misconfigurations or transient network issues.
-Operational Excelence - The ability to run and monitor systems to deliver
+
+=== Excelência Operacional
+The ability to run and monitor systems to deliver
 business value and to continually improve supporting
 processes and procedures.
-Performance Eficient - The ability to use computing resources efficiently
-to meet system requirements, and to maintain that
-efficiency as demand changes and technologies evolve. 
 
-=== Alta Disponibilidade
-=== Clusterização
-=== Construção de soluções tolerantes a falha
-=== Cloud Computing
+=== Performático
+The ability to use computing resources efficiently
+to meet system requirements, and to maintain that
+efficiency as demand changes and technologies evolve.
+
+
+// High Availability  - Sempre disponível, mesmo quando um componente falhar. MULTI AZ.
+// Fault Tolerant   - The ability for a cloud system to have automated workarounds for when a part of the system fails. Tem papel também sobre a degradação de performance. Extra redundância.
+// Scalabily - Com o aumento dos usuários, é possível, de maneira automática, adicionar mais servidores.
+//  - Vertical - Aumentar os recursos da máquina (CPU, RAM)
+//  - Horizontal - Adicionar mais máquinas
+// Elasticity - Diminuir ou aumentar os recursos e máquinas em uma stack

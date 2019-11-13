@@ -22,10 +22,6 @@ endif::[]
 * Os processos são separados em `namespaces`;
 * A Comunicação entre o `user space` e `kernel space` é feita por intermédio de bibliotecas ou sinais.
 
-ifdef::backend-revealjs[=== !]
-ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]
-image::{sourceimages}/kernel-stack.svg[width=50%]
-
 ifndef::backend-revealjs[=== User Space]
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação do user space]
@@ -41,7 +37,7 @@ ifndef::backend-revealjs[.Representação do kernel space]
 image::{sourceimages}/kernelspace.svg[width=60%]
 
 ifdef::backend-revealjs[=== !]
-* Onde os processos do usuário são executados;
+* Onde os processos do kernel são executados;
 * Região fracionada e privilegiada da memória.
 
 === System Calls
@@ -75,6 +71,10 @@ ifdef::backend-revealjs[=== !]
 lsmod <1>
 ----
 <1> Lista os módulos(drivers) carregados no Kernel.
+
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação da stack do Kernel do Linux]
+image::{sourceimages}/kernel-stack.svg[width=50%]
 
 ifdef::backend-revealjs[=== !]
 ifndef::backend-revealjs[.Representação da comunicação dos elementos da Stack do Kernel do Linux]
