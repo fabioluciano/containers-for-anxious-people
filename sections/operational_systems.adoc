@@ -105,6 +105,26 @@ strace ./printf <2>
 <1> Concede permissão de execução ao programa
 <2> Imprime todas as `SysCalls` chamadas pelo programa
 
+////
+É preciso fazer essa "solução de contorno" 
+
+:)
+////
+
+ifdef::backend-pdf[]
+.Execução dos passos anteriores no Asciinema
+image::https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO.png[Execução no Asciinema , link="https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO"]
+endif::[]
+
+ifdef::backend-html5[]
+++++
+<iframe width="1078" height="480" src="https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO/iframe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+++++
+endif::[]
+
+[%notitle,background-iframe="https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO/iframe"]
+ifdef::backend-revealjs[=== !]
+
 === Chroot (Jail)
 * Muda o diretório raiz de um processo;
 * Enclausuramento de recursos;

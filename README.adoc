@@ -1,4 +1,41 @@
-= Containers e Ansiedade
+include::variables.adoc[]
 
-Este é um documento/apresentação sobre a intimidade das tecnologias por trás da containerização.
+<<<
 
+include::{includedir}/abouttheauthor.adoc[]
+
+<<<
+
+include::{includedir}/aboutthis.adoc[]
+
+<<<
+
+include::{includedir}/introduction.adoc[]
+
+<<<
+
+include::{includedir}/opensource.adoc[]
+
+<<<
+
+include::{includedir}/operational_systems.adoc[]
+
+<<<
+
+include::{includedir}/containerization.adoc[]
+
+<<<
+
+include::{includedir}/convdev.adoc[]
+
+<<<
+
+include::{includedir}/starops.adoc[]
+
+<<<
+
+include::{includedir}/software_architecture.adoc[]
+
+<<<
+
+include::{includedir}/solutions_architecture.adoc[]

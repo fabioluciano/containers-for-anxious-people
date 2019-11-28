@@ -14,11 +14,10 @@ endif::[]
 * link:/containers-for-anxious-people/doc.pdf[Documento PDF]
 * link:/containers-for-anxious-people/presentation[Apresentação]
 
-<<<
-
 include::todo.adoc[]
 
 === Tecnologias
+* DocBook
 * AsciiDoc
 * AsciiDoctor
 * PlantUML
@@ -27,3 +26,9 @@ include::todo.adoc[]
 * Travis
 * Github Pages
 * link:https://asciinema.org/a/M5H7Jl6TEr0kIlcRtWOTWdiMO[Asciinema]
+
+=== Badges
+image::https://img.shields.io/badge/license-Apache-blue.svg[Apache , link="https://www.apache.org/licenses/LICENSE-2.0/"]
+image::https://img.shields.io/badge/Conversational_Development-friendly-yellow.svg[GitFlow , link="https://danielkummer.github.io/git-flow-cheatsheet/"]
+image::https://img.shields.io/badge/GitFlow-friendly-yellow.svg[Conversational Development, link="http://conversationaldevelopment.com/"]
+image::https://img.shields.io/badge/Conventional_Commits-1.0.0-yellow.svg[Conventional Commits, link="https://www.conventionalcommits.org/en/v1.0.0/"]

@@ -1,4 +1,4 @@
-== PROGRAMAÇÃO
+== O Que veremos
 
 ifndef::backend-revealjs[]
 Sempre quis falar sobre containers, porém, nunca havia encontrado uma abordagem interessante ao assunto, visto a quantidade infinita de conteúdo sobre este assunto na internet. Com este contexto, decidi não falar sobre `Docker` especificamente, mas sim sobre todas as tecnologias que o tornou possível e além disso, a partir da disseminação de tecnologias relacionadas a containers, ilustrar como sua existência mudou completamente a industria de infraestrutura e desenvolvimento de software.
@@ -13,7 +13,7 @@ endif::[]
 ifdef::backend-revealjs[* Open Source;]
 ifndef::backend-revealjs[=== Open Source]
 ifndef::backend-revealjs[]
-Nesta _primeira_ parte deste documento, vamos conversar sobre *Open Source* e as implicações do trabalho de milhares de pessoas ao redor do mundo para que este documento seja possível. Além disso, discutiremos sobre as aplicações do movimento open source por diversos setores da indústria, até o alimentício.
+Na _primeira_ parte deste documento, vamos conversar sobre *Open Source*. Discutiremos sobre as aplicações do movimento por diversos setores da indústria(até o alimentício 😲). Falarei sobre as principais licenças que caracterizam projetos do movimento livre, e também sobre os modelos implementados para organização destes projetos, falaremos sobre tipos de distribuições, como exemplo das possibilidades da implementação do `código-livre`, passearemos sobre grandes projetos, e por final, lhe farei convite.
 endif::[]
 
 ifdef::backend-revealjs[* Sistemas Operacionais e sua arquitetura;]
