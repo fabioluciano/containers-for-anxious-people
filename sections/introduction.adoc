@@ -13,7 +13,7 @@ endif::[]
 ifdef::backend-revealjs[* Open Source;]
 ifndef::backend-revealjs[=== Open Source]
 ifndef::backend-revealjs[]
-Na _primeira_ parte deste documento, vamos conversar sobre *Open Source*. Discutiremos sobre as aplicações do movimento por diversos setores da indústria(até o alimentício 😲). Falarei sobre as principais licenças que caracterizam projetos do movimento livre, e também sobre os modelos implementados para organização destes projetos, falaremos sobre tipos de distribuições, como exemplo das possibilidades da implementação do `código-livre`, passearemos sobre grandes projetos, e por final, lhe farei convite.
+Na _primeira_ parte deste documento, conversaremos sobre *Open Source*. Discutiremos sobre as aplicações do movimento por diversos setores da indústria(até o alimentício 😲). Falarei sobre as principais licenças que caracterizam projetos do movimento livre, e também sobre os modelos implementados para organização destes projetos, falaremos sobre tipos de distribuições, como exemplo das possibilidades da implementação do `código-livre`, passearemos sobre grandes projetos, e por final, lhe farei um convite.
 endif::[]
 
 ifdef::backend-revealjs[* Sistemas Operacionais e sua arquitetura;]
