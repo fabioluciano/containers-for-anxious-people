@@ -28,3 +28,5 @@ jobs:
         github_token: $GH_TOKEN
         on:
           tags: true
+          branch: false
+          
