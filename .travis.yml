@@ -23,7 +23,6 @@ jobs:
         token: $GH_TOKEN
         on:
           tags: true
-          branch: master
     - stage: push-image-to-dockerhub
       if: tag is present
       script:
