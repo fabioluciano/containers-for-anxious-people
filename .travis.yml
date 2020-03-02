@@ -15,6 +15,9 @@ jobs:
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o doc.pdf -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -o presentation.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
         - sudo rm -rf $TRAVIS_BUILD_DIR/output/.asciidoctor
+        - tar -czvf output.tar.gz -C output .
+        - docker build -t container-presentation:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
+	      - rm output.tar.gz
       deploy:
         provider: pages
         target-branch: gh-pages
@@ -22,4 +25,4 @@ jobs:
         local_dir: output/
         github_token: $GH_TOKEN
         on:
-          branch: development
+          tags: true

@@ -11,7 +11,7 @@ OUTPUTFILE_HTML = index.html
 OUTPUTFILE_PDF = documentation.pdf
 OUTPUTFILE_REAVELJS = presentation.html
 
-all: clean prepare pdf html presentation
+all: clean prepare pdf html presentation docker_image
 
 clean:
 	sudo rm -rf $(CURDIR)/output
@@ -31,3 +31,8 @@ pdf: clean prepare copy_images
 
 presentation: clean prepare copy_images
 	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -o $(OUTPUTFILE_REAVELJS) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(REVEALJSSTRING) src/README.adoc
+
+docker_image:
+	tar -czvf output.tar.gz -C output .
+	docker build -t container-presentation:1.0.0 --build-arg DEPLOYMENT=output.tar.gz .
+	rm output.tar.gz

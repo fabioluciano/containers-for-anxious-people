@@ -1,0 +1,9 @@
+kustomize/
+src/
+output/
+.travis.yml
+.git
+.gitignore
+.github
+.vscode
+.asciidoctor
