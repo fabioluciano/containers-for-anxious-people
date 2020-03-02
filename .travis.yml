@@ -19,7 +19,7 @@ jobs:
         - docker build -t fabioluciano/containers-for-anxious-people:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
         - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
         - docker push fabioluciano/containers-for-anxious-people:$TRAVIS_TAG
-	      - rm output.tar.gz
+        - rm output.tar.gz
       deploy:
         provider: pages
         target-branch: gh-pages
