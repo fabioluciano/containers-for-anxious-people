@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: containers-for-anxious-people
+  namespace: kube-integr8
+  labels:
+    app: containers-for-anxious-people
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: containers-for-anxious-people
+  template:
+    metadata:
+      labels:
+        app: containers-for-anxious-people
+    spec:
+      containers:
+      - name: containers-for-anxious-people
+        image: fabioluciano/containers-for-anxious-people:1.0.0
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "10m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"

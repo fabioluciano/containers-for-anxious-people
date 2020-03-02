@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: containers-for-anxious-people
+  namespace: kube-integr8
+spec:
+  rules:
+  - host: containers-for-anxious-people.integr8.me
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: containers-for-anxious-people
+          servicePort: 80
