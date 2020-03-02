@@ -1,0 +1,39 @@
+=== GraphQL
+ifdef::backend-revealjs[=== !]
+
+* É uma alternativa ao REST(Representational State Transfer);
+* Especificação criada e utilizada pelo Facebook;
+* Possui diversas implementações;
+* Passa a responsabilidade para o frontend.
+
+ifndef::backend-revealjs[=== GraphQL vs REST]
+ifdef::backend-revealjs[=== !]
+ifndef::backend-revealjs[.Representação das diferença entre as requisições do GraphQL e REST]
+image::{sourceimages}/graphql_vs_rest.jpeg[]
+
+=== Types
+* Representa uma entidade do sistema;
+* Geralmente mapeado a um Domínio/Modelo;
+* Onde serão listados todos os campos de uma entidade consumível;
+* É a `model` do HTTP.
+
+=== Queries
+* Representa uma consulta aos tipos existentes;
+* Onde serão definidas as relações entre os `Types`;
+* Cada `field` deve ser resolvido;
+* Podem ser filtrados utilizando argumentos;
+** `Query` -> `Field` -> `Resolver`
+
+=== Mutations
+* Onde as modificações aos `Types` serão persistidas;
+* Agrupa as operações  `POST`, `PUT` e `DELETE` do HTTP(`REST`);
+* Possui ligação direta a um `Type`;
+
+=== Schema
+* Agrupa `Types`, `Queries` e `Mutations` disponíveis;
+* Funciona como um contrato de todas os elementos disponíveis;
+
+
+
+
+

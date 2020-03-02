@@ -1,4 +1,6 @@
 == Containerização
+
+ifdef::backend-revealjs[=== !]
 * Empacotamento de código e aplicações;
 * Empacotamento de dependências e versões;
 * Empacotamento de configurações.

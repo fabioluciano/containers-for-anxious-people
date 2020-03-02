@@ -5,3 +5,5 @@
 === 12 Factor Apps
 
 === Microserviços
+
+include::graphql.adoc[]

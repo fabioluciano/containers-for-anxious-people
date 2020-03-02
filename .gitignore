@@ -1,2 +1,4 @@
 .asciidoctor
+.vscode
 output
+src/resources/examples/software_architecture/

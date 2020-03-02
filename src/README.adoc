@@ -2,9 +2,11 @@ include::variables.adoc[]
 
 <<<
 
+
 include::{includedir}/abouttheauthor.adoc[]
 
 <<<
+
 
 include::{includedir}/aboutthis.adoc[]
 

@@ -1,4 +1,6 @@
 == Conversational Development (ConvDev)
+
+ifdef::backend-revealjs[=== !]
 * Desenvolver software é uma conversa;
 ** O que precisa ser implementado;
 ** O que precisa ser modificado;
