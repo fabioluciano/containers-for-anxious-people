@@ -24,13 +24,13 @@ copy_images:
 	cp -r src/resources/image/ $(OUTPUTDIR)
 
 html: clean prepare copy_images
-	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor -o $(OUTPUTFILE_HTML) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(ROUGESTRING) src/README.adoc
+	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor -q -o $(OUTPUTFILE_HTML) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(ROUGESTRING) src/README.adoc
 
 pdf: clean prepare copy_images
-	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o $(OUTPUTFILE_PDF) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(ROUGESTRING) $(PDFOPTIONS) src/README.adoc
+	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -q -o $(OUTPUTFILE_PDF) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(ROUGESTRING) $(PDFOPTIONS) src/README.adoc
 
 presentation: clean prepare copy_images
-	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -o $(OUTPUTFILE_REAVELJS) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(REVEALJSSTRING) src/README.adoc
+	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -q -o $(OUTPUTFILE_REAVELJS) $(REQUIRESTRING) $(OUTPUTSTRING) $(PLATUMLSTRING) $(REVEALJSSTRING) src/README.adoc
 
 docker_image:
 	tar -czvf output.tar.gz -C output .

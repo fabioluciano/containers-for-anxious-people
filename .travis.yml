@@ -11,9 +11,9 @@ jobs:
       script:
         - mkdir -p output
         - cp -r $TRAVIS_BUILD_DIR/src/resources/image output/
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -o index.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o doc.pdf -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -o presentation.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -q  -o index.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -q -o doc.pdf -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
+        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -q -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -o presentation.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
         - sudo rm -rf $TRAVIS_BUILD_DIR/output/.asciidoctor
         - tar -czvf output.tar.gz -C output .
         - docker build -t fabioluciano/containers-for-anxious-people:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
