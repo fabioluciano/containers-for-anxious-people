@@ -16,9 +16,9 @@ jobs:
         - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -o presentation.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
         - sudo rm -rf $TRAVIS_BUILD_DIR/output/.asciidoctor
         - tar -czvf output.tar.gz -C output .
-        - docker build -t containers-for-anxious-people:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
+        - docker build -t fabioluciano/containers-for-anxious-people:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
         - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
-        - docker push containers-for-anxious-people:$TRAVIS_TAG
+        - docker push fabioluciano/containers-for-anxious-people:$TRAVIS_TAG
 	      - rm output.tar.gz
       deploy:
         provider: pages
