@@ -11,6 +11,8 @@ OUTPUTFILE_HTML = index.html
 OUTPUTFILE_PDF = documentation.pdf
 OUTPUTFILE_REAVELJS = presentation.html
 
+TAG = $(shell cat ./VERSION)
+
 all: clean prepare pdf html presentation docker_image
 
 clean:
@@ -34,5 +36,5 @@ presentation: clean prepare copy_images
 
 docker_image:
 	tar -czvf output.tar.gz -C output .
-	docker build -t container-presentation:1.0.0 --build-arg DEPLOYMENT=output.tar.gz .
+	docker build -t container-presentation:$(TAG) --build-arg DEPLOYMENT=output.tar.gz .
 	rm output.tar.gz
