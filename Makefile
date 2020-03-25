@@ -25,15 +25,15 @@ copy_assets:
 
 build_html:
 	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor \
-		-o $(OUTPUTDIR)$(OUTPUTFILE_HTML) $(HTMLOPTIONS) src/README.adoc
+		-o $(OUTPUTDIR)$(OUTPUTFILE_HTML) $(HTMLOPTIONS) -q src/README.adoc
 
 build_pdf:
 	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf \
-		$(PDFOPTIONS) -o $(OUTPUTDIR)$(OUTPUTFILE_PDF) src/README.adoc
+		$(PDFOPTIONS) -o $(OUTPUTDIR)$(OUTPUTFILE_PDF) -q src/README.adoc
 
 build_presentation:
 	docker run --rm -v $(CURDIR):/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs \
-		-q -o $(OUTPUTDIR)$(OUTPUTFILE_PRESENTATION) $(REVEALJSOPTIONS) src/README.adoc
+		-q -o $(OUTPUTDIR)$(OUTPUTFILE_PRESENTATION) $(REVEALJSOPTIONS) -q src/README.adoc
 
 optimize_pdf:
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dPrinted=false \
