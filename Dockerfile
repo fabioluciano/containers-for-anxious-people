@@ -1,3 +1,3 @@
-FROM httpd:2-alpine
+FROM nginx:1-alpine
 ARG DEPLOYMENT
-ADD ${DEPLOYMENT} /usr/local/apache2/htdocs/
+ADD ${DEPLOYMENT} /usr/share/nginx/html

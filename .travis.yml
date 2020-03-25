@@ -1,7 +1,6 @@
-os: linux
-language: c
-compiler: gcc
-
+language: python
+python:
+  - "3.7.1"
 services:
   - docker
 
@@ -9,30 +8,20 @@ cache:
   directories:
     - $TRAVIS_BUILD_DIR/output/
 
+before_script:
+  - sudo apt-get install -y ghostscript
+
 jobs:
   include:
-    - stage: build-and-deploy-to-ghpages
+    - stage: Build HTML and PDF
+      script:
+        - make build_html
+        - make build_pdf
+        - make build_presentation
+        - make optimize_pdf
+
+    - stage: Build Docker Image and Push to Docker Hub
       if: tag is present
       script:
-        - mkdir -p output
-        - cp -r $TRAVIS_BUILD_DIR/src/resources/image output/
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -q  -o index.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -q -o doc.pdf -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
-        - docker run --rm -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-revealjs -q -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0 -o presentation.html -r asciidoctor-diagram  -D output -a plantuml-config=resources/plantuml/plantuml.cfg src/README.adoc
-        - sudo rm -rf $TRAVIS_BUILD_DIR/output/.asciidoctor
-      deploy:
-        provider: pages
-        target_branch: gh-pages
-        cleanup: false
-        local_dir: $TRAVIS_BUILD_DIR/output/
-        token: $GH_TOKEN
-        on:
-          tags: true
-    - stage: push-image-to-dockerhub
-      if: tag is present
-      script:
-        - tar -czvf output.tar.gz -C output .
-        - docker build -t fabioluciano/containers-for-anxious-people:$TRAVIS_TAG --build-arg DEPLOYMENT=output.tar.gz .
-        - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
-        - docker push fabioluciano/containers-for-anxious-people:$TRAVIS_TAG
-        - rm output.tar.gz
+        - make build_docker_image 
+        - make push_docker_image
