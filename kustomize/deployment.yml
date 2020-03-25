@@ -5,7 +5,7 @@ metadata:
   labels:
     app: containers-for-anxious-people
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: containers-for-anxious-people
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: containers-for-anxious-people
-        image: fabioluciano/containers-for-anxious-people:1.0.2
+        image: fabioluciano/containers-for-anxious-people:1.0.3
         ports:
         - containerPort: 80
         resources:
