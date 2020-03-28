@@ -11,3 +11,7 @@ spec:
         backend:
           serviceName: containers-for-anxious-people
           servicePort: 80
+  tls:
+    - hosts:
+      - containers-for-anxious-people.integr8.app
+      secretName: containers-for-anxious-people-integr8-app-tls

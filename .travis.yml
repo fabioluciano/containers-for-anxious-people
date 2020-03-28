@@ -15,6 +15,7 @@ jobs:
   include:
     - stage: Build HTML and PDF
       script:
+        - make copy_assets
         - make build_html
         - make build_pdf
         - make build_presentation
