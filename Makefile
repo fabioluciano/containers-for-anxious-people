@@ -4,7 +4,7 @@ PDFOPTIONS = -r asciidoctor-diagram -a allow-uri-read -a pdf-theme=src/resources
 HTMLOPTIONS = -r asciidoctor-diagram -a toc=left -a docinfo=shared
 REVEALJSOPTIONS = -r asciidoctor-diagram -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0
 OUTPUTFILE_HTML = index.html
-OUTPUTFILE_PDF = resume-raw.pdf
+OUTPUTFILE_PDF = document-raw.pdf
 OUTPUTFILE_PRESENTATION = presentation.html
 
 CONTAINER_NAME = fabioluciano/containers-for-anxious-people
@@ -37,7 +37,7 @@ build_presentation:
 
 optimize_pdf:
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dPrinted=false \
-		-dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(OUTPUTDIR)resume.pdf $(OUTPUTDIR)resume-raw.pdf
+		-dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(OUTPUTDIR)document.pdf $(OUTPUTDIR)document-raw.pdf
 
 build_docker_image:
 	tar -czvf output.tar.gz -C output .
