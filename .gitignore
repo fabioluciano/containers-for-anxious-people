@@ -4,3 +4,4 @@ output
 src/resources/examples/software_architecture/
 output.tar.gz
 ?
+src/resources/plantuml/*.png

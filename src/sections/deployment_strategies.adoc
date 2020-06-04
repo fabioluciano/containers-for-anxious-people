@@ -1,0 +1,16 @@
+== Estratégias de Implantação
+
+=== Rolling Release
+
+=== Fixed Release
+
+=== Blue/Green Release
+
+plantuml::resources/plantuml/bluegreen_release_01.puml[format=svg]
+plantuml::resources/plantuml/bluegreen_release_02.puml[format=svg]
+
+=== Canary Release
+
+plantuml::resources/plantuml/canary_release_01.puml[format=svg]
+plantuml::resources/plantuml/canary_release_02.puml[format=svg]
+plantuml::resources/plantuml/canary_release_03.puml[format=svg]

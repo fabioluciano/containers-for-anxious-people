@@ -41,9 +41,9 @@ to meet system requirements, and to maintain that
 efficiency as demand changes and technologies evolve.
 
 
-// High Availability  - Sempre disponível, mesmo quando um componente falhar. MULTI AZ.
-// Fault Tolerant   - The ability for a cloud system to have automated workarounds for when a part of the system fails. Tem papel também sobre a degradação de performance. Extra redundância.
-// Scalabily - Com o aumento dos usuários, é possível, de maneira automática, adicionar mais servidores.
-//  - Vertical - Aumentar os recursos da máquina (CPU, RAM)
-//  - Horizontal - Adicionar mais máquinas
-// Elasticity - Diminuir ou aumentar os recursos e máquinas em uma stack
+High Availability  - Sempre disponível, mesmo quando um componente falhar. MULTI AZ.
+Fault Tolerant   - The ability for a cloud system to have automated workarounds for when a part of the system fails. Tem papel também sobre a degradação de performance. Extra redundância.
+Scalabily - Com o aumento dos usuários, é possível, de maneira automática, adicionar mais servidores.
+ - Vertical - Aumentar os recursos da máquina (CPU, RAM)
+ - Horizontal - Adicionar mais máquinas
+Elasticity - Diminuir ou aumentar os recursos e máquinas em uma stack

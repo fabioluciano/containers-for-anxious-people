@@ -1,4 +1,5 @@
-skinparam shadowing false
+@startuml canary_release_01
+
 !pragma teoz true
 hide stereotype
 skinparam dpi 300
@@ -95,3 +96,25 @@ skinparam rectangle<<PodRed>> {
   FontStyle Bold
   FontColor #E15736
 }
+
+rectangle "Service" as service <<Service>>
+
+service -[#0984e3]right->> replicaset_stable
+
+together {
+  frame "ReplicaSet" as replicaset_stable <<ReplicaSet>> {
+    rectangle "1.0.0 <&check>" as replica_stable_01 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_02 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_03 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_04 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_05 <<PodBlue>>
+
+    replica_stable_01 -[hidden]right- replica_stable_02
+    replica_stable_02 -[hidden]right- replica_stable_03
+    replica_stable_03 -[hidden]right- replica_stable_04
+    replica_stable_04 -[hidden]right- replica_stable_05
+  }
+}
+
+
+@enduml

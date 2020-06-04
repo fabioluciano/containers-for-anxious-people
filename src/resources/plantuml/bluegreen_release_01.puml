@@ -1,4 +1,5 @@
-skinparam shadowing false
+@startuml bluegreen_release_01
+
 !pragma teoz true
 hide stereotype
 skinparam dpi 300
@@ -95,3 +96,39 @@ skinparam rectangle<<PodRed>> {
   FontStyle Bold
   FontColor #E15736
 }
+
+rectangle "Service" as service <<Service>>
+
+service -[#0984e3]right->> replicaset_blue
+service -[#E8E8E8]right->> replicaset_green
+
+together {
+  frame "ReplicaSet" as replicaset_blue <<ReplicaSetBlue>> {
+    rectangle "1.0.0 <&check>" as replica_blue_01 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_blue_02 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_blue_03 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_blue_04 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_blue_05 <<PodBlue>>
+
+    replica_blue_01 -[hidden]right- replica_blue_02
+    replica_blue_02 -[hidden]right- replica_blue_03
+    replica_blue_03 -[hidden]right- replica_blue_04
+  }
+
+  frame "ReplicaSet" as replicaset_green <<ReplicaSet>> {
+    rectangle "1.1.0 <&check>" as replica_green_01 <<Pod>>
+    rectangle "1.1.0 <&check>" as replica_green_02 <<Pod>>
+    rectangle "1.1.0 <&check>" as replica_green_03 <<Pod>>
+    rectangle "1.1.0 <&check>" as replica_green_04 <<Pod>>
+    rectangle "1.1.0 <&check>" as replica_green_05 <<Pod>>
+
+    replica_green_01 -[hidden]right- replica_green_02
+    replica_green_02 -[hidden]right- replica_green_03
+    replica_green_03 -[hidden]right- replica_green_04
+  }
+
+  replicaset_blue -[hidden]down- replicaset_green
+}
+
+
+@enduml

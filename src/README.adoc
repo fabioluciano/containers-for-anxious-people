@@ -2,7 +2,6 @@ include::variables.adoc[]
 
 <<<
 
-
 include::{includedir}/abouttheauthor.adoc[]
 
 <<<
@@ -41,3 +40,7 @@ include::{includedir}/software_architecture.adoc[]
 <<<
 
 include::{includedir}/solutions_architecture.adoc[]
+
+<<<
+
+include::{includedir}/deployment_strategies.adoc[]

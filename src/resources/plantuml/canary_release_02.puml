@@ -1,4 +1,5 @@
-skinparam shadowing false
+@startuml canary_release_02
+
 !pragma teoz true
 hide stereotype
 skinparam dpi 300
@@ -7,7 +8,6 @@ skinparam defaultFontSize 10
 skinparam shadowing false
 
 skinparam nodesep 10
-skinparam ranksep 10
 
 skinparam RoundCorner 8
 skinparam ArrowColor #9DADC1
@@ -95,3 +95,35 @@ skinparam rectangle<<PodRed>> {
   FontStyle Bold
   FontColor #E15736
 }
+
+rectangle "Service" as service <<Service>>
+
+service -[#0984e3]right->> replicaset_stable
+service -[#4BEBBE]right->> replicaset_canary
+
+together {
+  frame "ReplicaSet" as replicaset_stable <<ReplicaSet>> {
+    rectangle "1.0.0 <&x>" as replica_stable_01 <<PodRed>>
+    rectangle "1.0.0 <&x>" as replica_stable_02 <<PodRed>>
+    rectangle "1.0.0 <&check>" as replica_stable_03 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_04 <<PodBlue>>
+    rectangle "1.0.0 <&check>" as replica_stable_05 <<PodBlue>>
+
+    replica_stable_01 -[hidden]right- replica_stable_02
+    replica_stable_02 -[hidden]right- replica_stable_03
+    replica_stable_03 -[hidden]right- replica_stable_04
+    replica_stable_04 -[hidden]right- replica_stable_05
+  }
+
+  frame "ReplicaSet" as replicaset_canary <<ReplicaSet>> {
+    rectangle "1.1.0 <&check>" as replica_canary_01 <<PodGreen>>
+    rectangle "1.1.0 <&check>" as replica_canary_02 <<PodGreen>>
+
+    replica_canary_01 -[hidden]right- replica_canary_02
+  }
+
+  replicaset_stable -[hidden]down- replicaset_canary
+}
+
+
+@enduml
