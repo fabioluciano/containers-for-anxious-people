@@ -1,0 +1,108 @@
+@startuml docker_real_stack
+
+!pragma teoz true
+hide stereotype
+skinparam dpi 300
+skinparam linetype ortho
+skinparam defaultFontSize 10
+skinparam shadowing false
+skinparam backgroundColor transparent
+
+skinparam defaultFontName        "Verdana"
+skinparam ParticipantPadding     10
+skinparam BoxPadding             10
+skinparam Padding                1
+
+skinparam nodesep 5
+skinparam ranksep 5
+
+skinparam RoundCorner 20
+skinparam ArrowColor #9DADC1
+skinparam ArrowThickness 1
+skinParam ArrowFontSize 5
+
+skinparam defaultTextAlignment right
+
+skinparam rectangle<<Default>> {
+  BackgroundColor #F5F5F5
+
+  BorderColor #E8E8E8
+  BorderThickness 1
+
+  FontColor #B3B3B3
+  FontSize 7
+  FontStyle bold
+}
+
+skinparam rectangle<<Red>> {
+  BackgroundColor #FFD1C7
+
+  BorderColor #FF7F60
+  BorderThickness 1
+
+
+  FontColor #FF7F60
+  FontSize 7
+  FontStyle bold
+}
+
+skinparam rectangle<<Blue>> {
+  BackgroundColor #B3D8FF
+
+  BorderColor #8CC4FF
+  BorderThickness 1
+
+  FontColor #77A7D9
+  FontSize 7
+  FontStyle bold
+}
+
+skinparam rectangle<<Green>> {
+  BackgroundColor #B3FFEA
+  
+  BorderColor #4BEBBE
+  BorderThickness 1
+
+  FontColor #00b894
+  FontSize 7
+  FontStyle bold
+}
+
+skinparam rectangle<<Yellow>> {
+  BackgroundColor #ffeaa7
+
+  BorderColor #fdcb6e
+
+  BorderThickness 1
+
+  FontStyle Bold
+  FontColor #FDAF1E
+  FontSize 7
+}
+
+skinparam rectangle<<Purple>> {
+  BackgroundColor #C9C2FF
+
+  BorderColor #978AFF
+
+  BorderThickness 1
+
+  FontStyle Bold
+  FontColor #897AFF
+  FontSize 7
+}
+
+rectangle "Hardware" <<Default>> {
+  rectangle "Kernel Space" <<Red>> {
+    rectangle "User Space" <<Blue>> {
+      
+      rectangle "Client" <<Purple>>  as Client
+      rectangle "API" <<Green>> as API
+      rectangle "Daemon" <<Yellow>> as Daemon
+
+      Client -right- API
+      API -right- Daemon
+    }
+  }
+}
+@enduml

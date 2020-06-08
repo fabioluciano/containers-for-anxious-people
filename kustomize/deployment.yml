@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: containers-for-anxious-people
-        image: fabioluciano/containers-for-anxious-people:1.1.0
+        image: fabioluciano/containers-for-anxious-people:1.2.0
         ports:
         - containerPort: 80
         resources:

@@ -1,0 +1,11 @@
+== Kubernetes
+
+As aplicações atualmente são construídas otimizadas focando em escalabilidade, elasticidade, tolerancia a falha e a mudanças.
+
+Kubernetes é uma plataforma de orquestração de containers
+
+Um padrão descreve uma solução repetível(?) para um problema, porém faz mais que prover uma solução, mas também formar uma linguagem que faz o link entre o problema e solução de maneira rápida
+
+As práticas relacionadas a construção de microserviços estão associadas aos conceitos do DDD
+
+plantuml::resources/plantuml/cloud_native_cocoon.puml[format=svg]

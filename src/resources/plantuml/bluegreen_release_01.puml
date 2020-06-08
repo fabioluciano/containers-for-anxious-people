@@ -129,6 +129,4 @@ together {
 
   replicaset_blue -[hidden]down- replicaset_green
 }
-
-
 @enduml

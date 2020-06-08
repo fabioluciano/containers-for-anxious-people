@@ -47,3 +47,5 @@ Scalabily - Com o aumento dos usuários, é possível, de maneira automática, a
  - Vertical - Aumentar os recursos da máquina (CPU, RAM)
  - Horizontal - Adicionar mais máquinas
 Elasticity - Diminuir ou aumentar os recursos e máquinas em uma stack
+
+include::kubernetes.adoc[]
