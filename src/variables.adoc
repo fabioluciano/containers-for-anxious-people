@@ -20,8 +20,8 @@
 
 :author: Fábio Luciano
 :fullname: Fábio Luciano Nogueira de Góis
-:company: SONDA IT
-:company-website: https://www.sonda.com
+:company-name: PicPay
+:company-website: https://www.picpay.com
 :email: fabio@naoimporta.com
 :authorinitials: F.L.N.G.
 
