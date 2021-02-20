@@ -1,5 +1,5 @@
 == Sobre o autor
-Meu nome é **{author}**, trabalho como arquiteto de soluções na empresa link:{company-website}[SONDA].
+Meu nome é **{author}**, trabalho como arquiteto de soluções na empresa link:{company-website}[{company-name}].
 
 ifndef::backend-revealjs[]
 Entre alguns fatos sobre mim, listo os seguintes como mais importantes:
